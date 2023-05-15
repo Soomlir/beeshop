@@ -13,9 +13,8 @@
 	</head>
 	<body>
 		{# For svelte #}{# <div class="page">{{ app.page }}</div> #}
-
+		{% block main %}{% endblock %}
 		{# For vue #}{# {{ app.page }} #}
-		<h1>Hello World</h1>
 		<script>
 			window.appData = {{ appData|json_encode() }};
 		</script>
