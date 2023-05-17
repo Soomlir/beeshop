@@ -1,5 +1,170 @@
 {% extends '../main.twig' %}
 
 {% block main %}
-	<h1>Hello World</h1>
+	<main class="page-main">
+		<section class="page-main__promo promo">
+			<h1 class="page-main__heading">Пчёлкошоп - лаборатория игр</h1>
+			<p class="promo__lead">Квест в коробке – объединяет семью и друзей в поисках разгадки</p>
+			<p class="promo__text">Подготовка до 10 минут, прохождение 60-90 минут, яркие эмоции - надолго!</p>
+
+			<a class="promo__link" href="#">Выбрать игру</a>
+		</section>
+
+		<section class="page-main__discount discount">
+			<h2 class="discount__heading">Новейшие акции</h2>
+			<a class="discount__link" href="#">Смотреть все акции</a>
+
+			<ul class="discount__list">
+				<li class="discount__item">
+					<h3 class="discount__heading">Скидка -15% на групповой заказ</h3>
+					<p class="discount__text">
+						Получите скидку -15% при оформлении группового заказа в период с 1 января 2021 г. по 19 февраля 2021 г.
+					</p>
+				</li>
+				<li class="discount__item">
+					<h3 class="discount__heading">Скидка -15% на групповой заказ</h3>
+					<p class="discount__text">
+						Получите скидку -15% при оформлении группового заказа в период с 1 января 2021 г. по 19 февраля 2021 г.
+					</p>
+				</li>
+			</ul>
+		</section>
+
+		<section class="page-main__catalog catalog">
+			<h2 class="catalog__products">Каталог игр</h2>
+			<p class="catalog__text">Популярные игры</p>
+			<a class="catalog__link" href="#">Смотреть все игры</a>
+
+			<ul class="catalog__list">
+				<li class="catalog__item">
+					<img src="#" alt="Игра Сказочное королевство">
+					<h3 class="catalog__heading">Настольная игра “Сказочное королевство” c дополненной реальностью</h3>
+					<ul class="catalog__list details-list">
+						<li class="details-list__item">Время игры: 60-90 мин</li>
+						<li class="details-list__item">Кол-во игроков: 2-6</li>
+						<li class="details-list__item">Подготовка: 0 мин</li>
+						<li class="details-list__item">Места: любые</li>
+						<li class="details-list__item">Сложность: простая</li>
+					</ul>
+					<p class="catalog__price">3 600₽</p>
+					<a class="catalog__add-to-cart" href="#">добавить в корзину</a>
+				</li>
+				<li class="catalog__item">
+					<img src="#" alt="Игра Сказочное королевство">
+					<h3 class="catalog__heading">Настольная игра “Сказочное королевство” c дополненной реальностью</h3>
+					<ul class="catalog__list details-list">
+						<li class="details-list__item">Время игры: 60-90 мин</li>
+						<li class="details-list__item">Кол-во игроков: 2-6</li>
+						<li class="details-list__item">Подготовка: 0 мин</li>
+						<li class="details-list__item">Места: любые</li>
+						<li class="details-list__item">Сложность: простая</li>
+					</ul>
+					<p class="catalog__price">3 600₽</p>
+					<a class="catalog__add-to-cart" href="#">добавить в корзину</a>
+				</li>
+				<li class="catalog__item">
+					<img src="#" alt="Игра Сказочное королевство">
+					<h3 class="catalog__heading">Настольная игра “Сказочное королевство” c дополненной реальностью</h3>
+					<ul class="catalog__list details-list">
+						<li class="details-list__item">Время игры: 60-90 мин</li>
+						<li class="details-list__item">Кол-во игроков: 2-6</li>
+						<li class="details-list__item">Подготовка: 0 мин</li>
+						<li class="details-list__item">Места: любые</li>
+						<li class="details-list__item">Сложность: простая</li>
+					</ul>
+					<p class="catalog__price">3 600₽</p>
+					<a class="catalog__add-to-cart" href="#">добавить в корзину</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="page-main__video video">
+			<h2 class="video-heading">Наша презентация</h2>
+			<div class="video__block"></div>
+		</section>
+
+		<section class="page-main__features features">
+			<h2 class="features__heading">Наши преимущества</h2>
+			<p class="features__lead">Квест – возможность подарить детям незабываемые эмоции!</p>
+			<ul class="features__list">
+				<li class="features__item">
+					Объединяет семью и друзей в поисках одной разгадки!
+				</li>
+				<li class="features__item">
+					Развивает логику и последовательное мышление!
+				</li>
+				<li class="features__item">
+					Заменит аниматора на празднике и обеспечит мероприятие на 5+!
+				</li>
+				<li class="features__item">
+					Все необходимое - уже есть в коробке!
+				</li>
+			</ul>
+
+			<a class="features__link" href="#">выбрать игру</a>
+		</section>
+
+		<section class="page-main__faq faq">
+			<h2 class="faq__heading">Часто задаваемые вопросы</h2>
+			<p class="faq__feedback">Есть вопросы? Напишите нам</p>
+			<dl class="faq__list">
+				<dt>+ Что такое игра-квест?</dt>
+				<dd></dd>
+				<dt>+ Что такое игра-квест?</dt>
+				<dd></dd>
+				<dt>+ Что такое игра-квест?</dt>
+				<dd></dd>
+				<dt>+ Что такое игра-квест?</dt>
+				<dd></dd>
+				<dt>+ Что такое игра-квест?</dt>
+				<dd></dd>
+				<dt>+ Что такое игра-квест?</dt>
+				<dd></dd>
+			</dl>
+
+			<a class="faq__link" href="#">Перейти в каталог</a>
+		</section>
+
+		<section class="page-main__feedback feedback">
+			<h2 class="feedback__heading">Отзывы о наших играх</h2>
+			<p class="feedback__text">Последние отзывы</p>
+			<a class="feedback__link" href="#">Смотреть все отзывы</a>
+
+			<ul class="feedback__list">
+				<li class="feedback__item">
+					<h3 class="feedback__name">Ирина Е.</h3>
+					<img src="#" alt="Аватар">
+					<p class="feedback__date">10-09-20</p>
+					<span class="feedback__raing">5/5</span>
+					<p class="feedback__text">
+						Советую всем мамочкам и папочкам! Первый квест, который мы выбрали - Загадки Египетских пирамид.
+						Играли, размышляли всей семьей! Это было действителньо очень занимательно!
+						<a class="feedback__more" href="#">Читать полностью</a>
+					</p>
+				</li>
+				<li class="feedback__item">
+					<h3 class="feedback__name">Ирина Е.</h3>
+					<img src="#" alt="Аватар">
+					<p class="feedback__date">10-09-20</p>
+					<span class="feedback__raing">5/5</span>
+					<p class="feedback__text">
+						Советую всем мамочкам и папочкам! Первый квест, который мы выбрали - Загадки Египетских пирамид.
+						Играли, размышляли всей семьей! Это было действителньо очень занимательно!
+						<a class="feedback__more" href="#">Читать полностью</a>
+					</p>
+				</li>
+				<li class="feedback__item">
+					<h3 class="feedback__name">Ирина Е.</h3>
+					<img src="#" alt="Аватар">
+					<p class="feedback__date">10-09-20</p>
+					<span class="feedback__raing">5/5</span>
+					<p class="feedback__text">
+						Советую всем мамочкам и папочкам! Первый квест, который мы выбрали - Загадки Египетских пирамид.
+						Играли, размышляли всей семьей! Это было действителньо очень занимательно!
+						<a class="feedback__more" href="#">Читать полностью</a>
+					</p>
+				</li>
+			</ul>
+		</section>
+	</main>
 {% endblock %}
