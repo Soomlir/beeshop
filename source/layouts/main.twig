@@ -11,10 +11,75 @@
 			<link rel="preload" href="fonts/ptsans-{{ weight }}.woff2" as="font" crossorigin="anonymous">
 		{% endfor %}
 	</head>
-	<body>
+	<body class="page">
 		{# For svelte #}{# <div class="page">{{ app.page }}</div> #}
+		<header class="page-header">
+			<div class="wrap">
+				<a class="page-header__cart" href="#">Корзина</a>
+				<a class="page-header__menu-burger" href="#">Меню сайта</a>
+			</div>
+			<a class="page-header__tel" href="tel:80000000000">8-(000)-000-00-00 МСК (9-21)</a>
+		</header>
+
 		{% block main %}{% endblock %}
 		{# For vue #}{# {{ app.page }} #}
+
+		<footer class="page-footer">
+			<a class="page-footer__logo" href="#">Логотип</a>
+			<a class="page-footer__tel" href="tel:80000000000">8-(000)-000-00-00 МСК (9-21)</a>
+			<p class="page-footer__email">pchelkashop.ru@mail.ru</p>
+
+			<ul class="page-footer__list">
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Акции и новости</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Игры для праздника</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Развивающие игры</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Игры в дорогу</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Личный кабинет</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Партнерам</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Групповой заказ</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Постоянный покупатель</a>
+				</li>
+			</ul>
+
+			<ul class="page-footer__second-list">
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Отзывы</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Доставка и оплата</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Возврат</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">О компании</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Контакты</a>
+				</li>
+				<li class="page-footer__item">
+					<a class="page-footer__link" href="#">Документы</a>
+				</li>
+			</ul>
+			<p class="page-footer__text">Политика конфиденциальности</p>
+			<p class="page-footer__text">Публичная оферта</p>
+		</footer>
+
 		<script>
 			window.appData = {{ appData|json_encode() }};
 		</script>
