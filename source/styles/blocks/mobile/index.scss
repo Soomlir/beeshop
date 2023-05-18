@@ -1,0 +1,57 @@
+.page-header {
+	background-image: url("../images/mobile/bg-header-mobile.webp");
+	background-repeat: no-repeat;
+}
+
+.page-header__cart,
+.page-header__menu-burger {
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin-top: 24px;
+	margin-bottom: 36px;
+	background-color: #ffffff;
+	border-radius: 7px;
+}
+
+.page-header__cart {
+	position: relative;
+	margin-left: 20px;
+	background-image: url("../images/mobile/cart.webp");
+}
+
+.page-header__cart::after {
+	content: "";
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	display: block;
+	width: 13px;
+	height: 13px;
+	background-color: #db4e66;
+	border-radius: 50%;
+}
+
+.page-header__menu-burger {
+	margin-right: 20px;
+	background-image: url("../images/mobile/menu.webp");
+}
+
+.wrap {
+	display: flex;
+	justify-content: space-between;
+}
+
+.page-header__tel {
+	display: block;
+	padding: 19px 72px;
+	font-size: 16px;
+	line-height: 19px;
+	text-decoration: none;
+	color: #884900;
+}
+
+.promo {
+	background-image: url("../images/mobile/index/promo.webp");
+	background-repeat: no-repeat;
+}
