@@ -1,0 +1,37 @@
+.promo {
+	background-image: url("../images/mobile/index/promo.webp");
+	background-repeat: no-repeat;
+}
+
+.promo__lead {
+	margin: 0;
+	padding: 236px 20px 16px;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 43px;
+	color: #fafaf9;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.48);
+}
+
+.promo__text {
+	margin: 0;
+	padding: 7px 20px 32px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	color: #fafaf9;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.44);
+}
+
+.promo__link {
+	margin-bottom: 113px;
+	margin-left: 20px;
+	padding: 17px 86px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	text-decoration: none;
+	color: #ffffff;
+	border-radius: 12px;
+	box-shadow: 2px 4px 9px rgba(243, 55, 87, 0.42);
+}
