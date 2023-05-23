@@ -1,5 +1,7 @@
 .catalog {
 	padding: 0 20px;
+	padding-bottom: 36px;
+	border-bottom: 1px solid #cccccc;
 }
 
 .catalog__products {
@@ -31,12 +33,94 @@
 
 .catalog__list {
 	margin: 0;
+	margin-top: 28px;
 	padding: 0;
 	list-style-type: none;
 }
 
 .catalog__item {
-	padding: 29px 24px 30px 23px;
+	margin-bottom: 16px;
+	padding: 27px 24px 30px 23px;
 	border-radius: 12px;
 	box-shadow: 0 4px 9px #d3d3d3;
+}
+
+.catalog__heading {
+	margin: 0;
+	margin-top: 25px;
+	margin-bottom: 23px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #222528;
+}
+
+.details-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 160%;
+	color: #5b636b;
+}
+
+.details-list__item {
+	position: relative;
+	padding-left: 34px;
+}
+
+.details-list__item::before {
+	content: "";
+	position: absolute;
+	top: 1px;
+	left: 0;
+}
+
+.details-list__item--hourglass {
+	background: url("../images/icons/hourglass.svg") no-repeat;
+}
+
+.details-list__item--grin {
+	background: url("../images/icons/grin.svg") no-repeat;
+}
+
+.details-list__item--history {
+	background: url("../images/icons/history.svg") no-repeat;
+}
+
+.details-list__item--basketball {
+	background: url("../images/icons/basketball.svg") no-repeat;
+}
+
+.details-list__item--brain {
+	background: url("../images/icons/brain.svg") no-repeat;
+}
+
+.catalog__price {
+	margin: 0;
+	margin-top: 35px;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	color: #db4e66;
+}
+
+.catalog__add-to-cart {
+	display: block;
+	width: 276px;
+	margin-top: 28px;
+	margin-left: 2px;
+	padding: 17px 2px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: #fafaf9;
+	background: #f2b236;
+	border-radius: 12px;
+	box-shadow: 0 3px 7px #ffe9bf;
 }
