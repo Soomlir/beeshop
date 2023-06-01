@@ -13,7 +13,7 @@
 
 .features__list {
 	margin: 0;
-	margin-top: 42px;
+	margin-top: 35px;
 	padding: 0;
 	list-style: none;
 }
@@ -38,6 +38,10 @@
 	background-color: #ffffff;
 	border-radius: 14px;
 	box-shadow: 0 4px 9px #dadada;
+}
+
+.features__image-wrap img {
+	margin-top: 10px;
 }
 
 .features__text {
