@@ -12,7 +12,7 @@
 	}
 
 	.page-header {
-		min-height: 154px;
+		/* min-height: 154px; */
 	}
 
 	.page-header__navigation {

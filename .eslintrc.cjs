@@ -1,5 +1,6 @@
 /* eslint-env node */
 module.exports = {
+	ignorePatterns: ['*.min.*'],
 	root: true,
 	extends: [
 		'plugin:vue/vue3-essential',
@@ -148,7 +149,7 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: ['*.cjs'],
+			files: ['*.cjs', '*.config.js'],
 			env: { node: true },
 		},
 		{
