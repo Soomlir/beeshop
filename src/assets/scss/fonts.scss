@@ -1,0 +1,9 @@
+@each $weight in (400, 700) {
+	@font-face {
+		font-weight: $weight;
+		font-family: 'Rubik';
+		font-style: normal;
+		font-display: swap;
+		src: url('/fonts/rubik-#{$weight}.woff2') format('woff2');
+	}
+}
