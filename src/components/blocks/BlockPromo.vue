@@ -30,7 +30,7 @@
 		font-weight: 500;
 		font-size: 36px;
 		line-height: 43px;
-		color: #fafaf9;
+		color: $darken-white-color;
 	}
 
 	.promo__description {
@@ -39,7 +39,7 @@
 		padding-bottom: 32px;
 		font-weight: 500;
 		font-size: 20px;
-		color: #fafaf9;
+		color: $darken-white-color;
 	}
 
 	.promo__button {
@@ -51,7 +51,7 @@
 		font-weight: 500;
 		font-size: 14px;
 		text-align: center;
-		color: #fafaf9;
+		color: $darken-white-color;
 		text-transform: uppercase;
 		text-decoration: none;
 		background-color: #db4e66;

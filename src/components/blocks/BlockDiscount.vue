@@ -20,7 +20,6 @@ defineProps({
 });
 </script>
 
-
 <style lang="scss" scoped>
 	.discount {
 		padding: 48px 20px;
