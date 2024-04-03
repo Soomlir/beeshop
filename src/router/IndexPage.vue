@@ -10,5 +10,6 @@
 <script setup>
 import BlockPromo from '@/components/blocks/BlockPromo.vue';
 import BlockDiscount from '@/components/blocks/BlockDiscount.vue';
+import BlockCatalog from '@/components/blocks/BlockCatalog.vue';
 import discounts from '@/data/discounts';
 </script>
