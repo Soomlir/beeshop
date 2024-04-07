@@ -50,8 +50,9 @@ defineProps({
 	}
 
 	.discount__item {
-		margin-bottom: 23px;
+		margin-bottom: 16px;
 		padding: 23px 22px;
+		padding-bottom: 30px;
 		border-radius: 14px;
 		box-shadow: 0 4px 9px 0 #d3d3d3;
 	}
@@ -61,6 +62,7 @@ defineProps({
 		margin-bottom: 16px;
 		font-weight: 500;
 		font-size: 20px;
+		line-height: 24px;
 		color: #db4e66;
 	}
 

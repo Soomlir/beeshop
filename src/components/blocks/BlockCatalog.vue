@@ -28,7 +28,7 @@
 						<dt class="game-list__termin">Сложность: </dt>
 						<dd class="game-list__data">простая</dd>
 					</div>
-					<div class="game-list__wrapper label">
+					<div class="game-list__wrapper game-list__label">
 						<dt class="game-list__termin">Возраст: </dt>
 						<dd class="game-list__data">6+</dd>
 					</div>
@@ -85,7 +85,6 @@
 
 .game-list__img {
 	margin-bottom: 21px;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .game-list__heading {
@@ -98,8 +97,9 @@
 
 .game-list__wrapper {
 	position: relative;
-	height: 26px;
+	padding-bottom: 7px;
 	padding-left: 34px;
+	font-size: 16px;
 	color: #5b636b;
 
 	&::before {
@@ -142,30 +142,23 @@
 .game-list__data {
 	display: inline;
 	margin: 0;
-	font-size: 16px;
 }
 
-.label {
+.game-list__label {
 	content: '';
 	position: absolute;
 	top: 30px;
 	right: 23px;
 	box-sizing: border-box;
 	width: 122px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-left: 0;
+	padding: 3px 18px 2px;
+	font-size: 14px;
+	line-height: 22px;
 	text-align: center;
 	color: #fafaf9;
 	text-transform: uppercase;
 	background-color: #90c1bf;
 	border-radius: 6px;
-
-	& dt,
-	& dd {
-		font-size: 14px;
-		line-height: 22px;
-	}
 }
 
 .game-list__price {
@@ -182,7 +175,7 @@
 	width: 276px;
 	margin: 0;
 	margin-left: 4px;
-	padding: 15px 28px 18px;
+	padding: 15px 28px 17px;
 	font-weight: 500;
 	font-size: 15px;
 	text-align: center;
