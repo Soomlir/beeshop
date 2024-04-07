@@ -151,7 +151,7 @@
 	right: 23px;
 	box-sizing: border-box;
 	width: 122px;
-	padding: 3px 18px 2px;
+	padding: 3px 16px 2px;
 	font-size: 14px;
 	line-height: 22px;
 	text-align: center;
