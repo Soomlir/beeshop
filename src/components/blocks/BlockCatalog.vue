@@ -1,44 +1,65 @@
 <template>
-	<section class="catalog">
-		<h2 class="catalog__title">Каталог игр</h2>
-		<p class="catalog__text">Популярные игры</p>
-		<a class="catalog__link" href="#!">Смотреть все игры</a>
-		<ul class="catalog__list game-list">
-			<li class="catalog__item game-list__item">
-				<img class="game-list__img" src="/images/game-card-1.jpg" alt="Настольная игра Сказочное королевство.">
-				<h3 class="game-list__heading">Настольная игра “Сказочное королевство” с дополненной реальностью</h3>
-				<dl class="game-list__options">
-					<div class="game-list__wrapper game-list__wrapper--1">
-						<dt class="game-list__termin">Время игры: </dt>
-						<dd class="game-list__data">60-90 мин</dd>
-					</div>
-					<div class="game-list__wrapper game-list__wrapper--2">
-						<dt class="game-list__termin">Кол-во игроков: </dt>
-						<dd class="game-list__data">2-6</dd>
-					</div>
-					<div class="game-list__wrapper game-list__wrapper--3">
-						<dt class="game-list__termin">Подготовка: </dt>
-						<dd class="game-list__data">0 мин</dd>
-					</div>
-					<div class="game-list__wrapper game-list__wrapper--4">
-						<dt class="game-list__termin">Места: </dt>
-						<dd class="game-list__data">любые</dd>
-					</div>
-					<div class="game-list__wrapper game-list__wrapper--5">
-						<dt class="game-list__termin">Сложность: </dt>
-						<dd class="game-list__data">простая</dd>
-					</div>
-					<div class="game-list__wrapper game-list__label">
-						<dt class="game-list__termin">Возраст: </dt>
-						<dd class="game-list__data">6+</dd>
-					</div>
-				</dl>
-				<p class="game-list__price">3600₽</p>
-				<button class="game-list__add button">добавить в корзину</button>
-			</li>
-		</ul>
-	</section>
+  <section class="catalog">
+    <h2 class="catalog__title">Каталог игр</h2>
+    <p class="catalog__text">Популярные игры</p>
+    <a class="catalog__link" href="#!">Смотреть все игры</a>
+    <ul class="catalog__list game-list">
+      <li
+        class="catalog__item game-list__item"
+        v-for="({ title, image, params, price }, i) in games"
+        :key="i"
+      >
+        <img
+          class="game-list__img"
+          :src="image"
+          :alt="title"
+        />
+        <h3 class="game-list__heading">{{ title }}</h3>
+        <dl class="game-list__options">
+          <div
+            :class="{
+              [`game-list__wrapper game-list__wrapper--${j + 1}`]: termin !== 'age',
+              'game-list__label': termin === 'age',
+            }"
+            v-for="(value, termin, j) in termins"
+            :key="value"
+          >
+            <dt class="game-list__termin">{{ value }}: </dt>
+            <dd class="game-list__data">{{ params[termin] }}</dd>
+          </div>
+        </dl>
+        <p class="game-list__price">{{ price }}₽</p>
+        <button class="game-list__add button">добавить в корзину</button>
+      </li>
+    </ul>
+  </section>
 </template>
+
+<script setup>
+const termins = {
+	time: 'Время игры',
+	players: 'Кол-во игроков',
+	prepare: 'Подготовка',
+	places: 'Места',
+	complexity: 'Сложность',
+	age: 'Возраст',
+};
+
+const games = Array.from({ length: 3 }, () => ({
+	title: 'Настольная игра “Сказочное королевство” с дополненной реальностью',
+	image: '/images/game-card-1.jpg',
+	params: {
+		time: '60-90 мин',
+		players: '2-6',
+		prepare: '0 мин',
+		places: 'любые',
+		complexity: 'простая',
+		age: '6+',
+	},
+	price: 3600,
+}));
+</script>
+
 
 <style lang="scss" scoped>
 .catalog {
@@ -79,6 +100,7 @@
 
 .catalog__item {
 	position: relative;
+	margin-bottom: 17px;
 	padding: 29px 23px;
 	box-shadow: 0 4px 9px 0 #d3d3d3;
 }
