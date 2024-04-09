@@ -65,6 +65,8 @@ const games = Array.from({ length: 3 }, () => ({
 .catalog {
 	padding: 0 20px;
 	padding-top: 64px;
+	padding-bottom: 38px;
+	border-bottom: 1px solid #a5aaaf;
 }
 
 .catalog__title {
@@ -100,8 +102,9 @@ const games = Array.from({ length: 3 }, () => ({
 
 .catalog__item {
 	position: relative;
-	margin-bottom: 17px;
-	padding: 29px 23px;
+	margin-bottom: 15px;
+	padding: 29px 23px 31px;
+	border-radius: 12px;
 	box-shadow: 0 4px 9px 0 #d3d3d3;
 }
 
