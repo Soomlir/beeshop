@@ -6,6 +6,8 @@
 		<block-catalog class="main__catalog" />
 		<block-preview class="main__preview" />
 		<block-features class="main__features" />
+		<block-faq class="main__faq" />
+		<block-reviews class="main__reviews" />
 	</main>
 </template>
 
@@ -15,5 +17,7 @@ import BlockDiscount from '@/components/blocks/BlockDiscount.vue';
 import BlockCatalog from '@/components/blocks/BlockCatalog.vue';
 import BlockPreview from '@/components/blocks/BlockPreview.vue';
 import BlockFeatures from '@/components/blocks/BlockFeatures.vue';
+import BlockFaq from '@/components/blocks/BlockFaq.vue';
+import BlockReviews from '@/components/blocks/BlockReviews.vue';
 import discounts from '@/data/discounts';
 </script>

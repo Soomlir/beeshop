@@ -17,7 +17,7 @@ import BaseFooter from './components/BaseFooter.vue';
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	overflow: hidden auto;
+	// overflow: hidden auto;
 }
 
 .page__main {
