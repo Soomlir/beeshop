@@ -1,16 +1,37 @@
 <template>
-	<section class="faq">
-		<h2 class="faq__title">Часто задаваемые вопросы</h2>
-		<div class="faq__contact-us contact-us">
-			<p class="contact-us__text">Есть вопросы? Напишите нам</p>
-		</div>
-		<dl class="faq__list">
-			<!-- <dt class="faq__termin" v-for="item of (6)">+ Что такое игра-квест?</dt> -->
-			<dd class="faq__defination"></dd>
-		</dl>
-		<a class="faq__button" href="#!">Перейти в каталог</a>
-	</section>
+  <section class="faq">
+    <h2 class="faq__title">Часто задаваемые вопросы</h2>
+    <div class="faq__contact-us contact-us">
+      <p class="contact-us__text">Есть вопросы? Напишите нам</p>
+    </div>
+    <dl class="faq__list">
+      <template v-for="(item, i) in questions" :key="i">
+        <dt
+          class="faq__termin"
+          :class="{ 'faq__termin--opened': item.opened }"
+          @click="item.opened = !item.opened"
+        >
+          {{ item.question }}
+        </dt>
+        <dd
+          class="faq__definition"
+          v-show="item.opened"
+        >
+          {{ item.answer }}
+        </dd>
+      </template>
+    </dl>
+    <a class="faq__button" href="#!">Перейти в каталог</a>
+  </section>
 </template>
+
+<script setup>
+const questions = Array.from({ length: 6 }, () => ({
+	question: 'Что такое игра-квест?',
+	answer: 'Это такая игра, типа квест',
+	opened: false,
+}));
+</script>
 
 <style lang="scss" scoped>
 .faq {
@@ -35,7 +56,7 @@
 .faq__title {
 	order: 1;
 	margin: 0;
-	margin-bottom: 20px;
+	margin-bottom: 34px;
 	font-weight: 500;
 	font-size: 32px;
 	color: #222528;
@@ -51,6 +72,7 @@
 	margin-left: auto;
 	padding-left: 69px;
 	color: #222528;
+	background-color: #ffffff;
 	border-radius: 64px;
 	box-shadow: 0 4px 9px #d3d3d3;
 
@@ -82,30 +104,38 @@
 	display: flex;
 	flex-direction: column;
 	order: 2;
-	margin-bottom: 50px;
+	margin: 0;
+	margin-bottom: 55px;
 	font-weight: 500;
 	font-size: 20px;
 	color: #222528;
-	gap: 6px;
 }
 
 .faq__termin {
-	padding-top: 17px;
+	position: relative;
+	padding-top: 23px;
 	padding-bottom: 24px;
+	padding-left: 17px;
 	border-bottom: 1px solid #a5aaaf;
 	cursor: pointer;
+
+	&::before {
+		content: '+';
+		position: absolute;
+		top: 22px;
+		left: 0;
+	}
 }
 
 .faq__button {
-	display: flex;
 	order: 3;
 	box-sizing: border-box;
 	width: 276px;
-	height: 50px;
 	margin-bottom: 60px;
-	padding: 16px 32px;
+	padding: 17px 32px;
 	font-weight: 500;
 	font-size: 14px;
+	line-height: 16px;
 	text-align: center;
 	color: #fafaf9;
 	text-transform: uppercase;
