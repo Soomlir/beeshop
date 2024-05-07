@@ -62,13 +62,18 @@ const postData = Array.from({ length: 3 }, () => ({
 }
 
 .post {
-	padding: 32px 20px 31px 19px;
+	margin-bottom: 14px;
+	padding: 32px 20px 34px 19px;
+	border-radius: 14px;
 	box-shadow: 0 4px 9px #d3d3d3;
 }
 
 .post__header {
 	display: grid;
 	grid-template-columns: 79px 1fr;
+	grid-template-rows: 27px 32px 20px;
+	margin-bottom: 25px;
+	column-gap: 18px;
 }
 
 .post__image {
@@ -77,11 +82,15 @@ const postData = Array.from({ length: 3 }, () => ({
 
 .post__author-name {
 	margin: 0;
+	font-weight: 500;
+	font-size: 20px;
+	color: #222528;
 }
 
 .post__date {
 	grid-column: 2 / -1;
 	margin: 0;
+	color: #a5aaaf;
 }
 
 .post__rating {
@@ -90,6 +99,7 @@ const postData = Array.from({ length: 3 }, () => ({
 }
 
 .post__text {
+	margin: 0;
 	font-size: 16px;
 	color: #222528;
 }

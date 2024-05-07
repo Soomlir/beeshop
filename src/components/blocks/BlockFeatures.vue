@@ -32,6 +32,7 @@
 	margin-bottom: 55px;
 	font-weight: 500;
 	font-size: 32px;
+	color: #222528;
 }
 
 .features__list {
