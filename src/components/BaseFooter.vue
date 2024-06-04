@@ -10,28 +10,30 @@
 			>pchelkashop.ru@mail.ru</a
 		>
 
-		<ul>
-			<li><a href="#!">Акции и новости</a></li>
-			<li><a href="#!">Игры для праздника</a></li>
-			<li><a href="#!">Развивающие игры</a></li>
-			<li><a href="#!">Игры в дорогу</a></li>
-		</ul>
+		<div class="footer-list__wrapper">
+			<ul class="footer__list">
+				<li class="footer__item"><a href="#!">Акции и новости</a></li>
+				<li class="footer__item"><a href="#!">Игры для праздника</a></li>
+				<li class="footer__item"><a href="#!">Развивающие игры</a></li>
+				<li class="footer__item"><a href="#!">Игры в дорогу</a></li>
+			</ul>
 
-		<ul>
-			<li><a href="#!">Отзывы</a></li>
-			<li><a href="#!">Доставка и оплата</a></li>
-			<li><a href="#!">Возврат</a></li>
-			<li><a href="#!">О компании</a></li>
-			<li><a href="#!">Контакты</a></li>
-			<li><a href="#!">Документы</a></li>
-		</ul>
+			<ul class="footer__list">
+				<li class="footer__item"><a href="#!">Отзывы</a></li>
+				<li class="footer__item"><a href="#!">Доставка и оплата</a></li>
+				<li class="footer__item"><a href="#!">Возврат</a></li>
+				<li class="footer__item"><a href="#!">О компании</a></li>
+				<li class="footer__item"><a href="#!">Контакты</a></li>
+				<li class="footer__item"><a href="#!">Документы</a></li>
+			</ul>
 
-		<ul>
-			<li><a href="#!">Личный кабинет</a></li>
-			<li><a href="#!">Партнерам</a></li>
-			<li><a href="#!">Групповой заказ</a></li>
-			<li><a href="#!">Постоянный покупатель</a></li>
-		</ul>
+			<ul class="footer__list">
+				<li class="footer__item footer__item--accent"><a href="#!">Личный кабинет</a></li>
+				<li class="footer__item"><a href="#!">Партнерам</a></li>
+				<li class="footer__item"><a href="#!">Групповой заказ</a></li>
+				<li class="footer__item"><a href="#!">Постоянный покупатель</a></li>
+			</ul>
+		</div>
 
 		<div class="footer__political">
 			<p>Политика конфиденциальности</p>
@@ -75,6 +77,10 @@
 	margin-bottom: 6px;
 }
 
+.footer__email {
+	margin-bottom: 50px;
+}
+
 .footer ul {
 	list-style: none;
 }
@@ -87,8 +93,40 @@
 	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.footer-list__wrapper {
+	display: grid;
+	grid-template-columns: 189px 145px;
+	grid-template-rows: 184px 1fr;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+
+.footer__list {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.footer__item {
+	padding-bottom: 16px;
+
+	&--accent {
+		font-weight: 700;
+	}
+}
+
 .footer__political {
+	padding: 25px 64px;
 	color: #ced0d2;
 	background-color: #222528;
+}
+
+.footer__political p {
+	margin: 0;
+}
+
+.footer__political p:first-child {
+	padding-bottom: 10px;
 }
 </style>
