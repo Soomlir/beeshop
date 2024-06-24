@@ -21,7 +21,7 @@
 	box-shadow: 0 4px 4px 0 rgba(#000000, 25%);
 
 	@media (min-width: 768px) {
-		padding: 265px 54px 113px;
+		padding: 265px 54px 246px;
 		background-image: url('/images/promo-bg-tablet.jpg');
 	}
 
@@ -58,6 +58,7 @@
 	color: $darken-white-color;
 
 	@media (min-width: 768px) {
+		padding-bottom: 45px;
 		font-size: 24px;
 	}
 }
@@ -77,5 +78,11 @@
 	background-color: #db4e66;
 	border-radius: 12px;
 	box-shadow: 0 4px 4px 0 rgba(#000000, 25%);
+
+	@media (min-width: 768px) {
+		width: 306px;
+		font-size: 17px;
+		border-radius: 14px;
+	}
 }
 </style>

@@ -3,7 +3,8 @@
     <h2 class="discount__title">Новейшие акции</h2>
     <a class="discount__link" href="#!">Смотреть все акции</a>
     <ul class="discount__list">
-      <li class="discount__item" v-for="{id, title, description} in discounts" :key="id">
+      <li class="discount__item" v-for="{id, title, description, background} in discounts"
+					:key="id" :style="{ 'discount__item--discount-1': background[id + 1] }">
         <h3 class="discount__heading">{{ title }}</h3>
         <p class="discount__text">{{ description }}</p>
       </li>
@@ -24,6 +25,12 @@ defineProps({
 	.discount {
 		padding: 48px 20px;
 		border-bottom: 1px solid #a5aaaf;
+
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			padding: 64px 54px 82px;
+		}
 	}
 
 	.discount__title {
@@ -32,6 +39,12 @@ defineProps({
 		font-weight: 400;
 		font-size: 16px;
 		color: #5b636b;
+
+		@media (min-width: 768px) {
+			margin-top: 3px;
+			margin-bottom: 0;
+			margin-left: 16px;
+		}
 	}
 
 	.discount__link {
@@ -40,6 +53,13 @@ defineProps({
 		color: #db4e66;
 		text-transform: uppercase;
 		text-decoration: none;
+
+		@media (min-width: 768px) {
+			justify-self: end;
+			margin-top: 7px;
+			margin-right: 11px;
+			font-size: 16px;
+		}
 	}
 
 	.discount__list {
@@ -47,6 +67,11 @@ defineProps({
 		margin-top: 37px;
 		padding: 0;
 		list-style: none;
+
+		@media (min-width: 768px) {
+			grid-column: span 2;
+			margin-top: 42px;
+		}
 	}
 
 	.discount__item {
@@ -55,6 +80,34 @@ defineProps({
 		padding-bottom: 30px;
 		border-radius: 14px;
 		box-shadow: 0 4px 9px 0 #d3d3d3;
+
+		@media (min-width: 768px) {
+			position: relative;
+			padding-right: 34px;
+			padding-bottom: 61px;
+			padding-left: 168px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 36px;
+				left: 35px;
+				width: 118px;
+				height: 118px;
+			}
+
+			&--discount-1 {
+				background-image: url('/images/discount-1.png');
+			}
+
+			&--discount-2 {
+				background-image: url('/images/discount-2.png');
+			}
+
+			&--discount-3 {
+				background-image: url('/images/discount-3.png');
+			}
+		}
 	}
 
 	.discount__heading {
@@ -64,6 +117,12 @@ defineProps({
 		font-size: 20px;
 		line-height: 24px;
 		color: #db4e66;
+
+		@media (min-width: 768px) {
+			margin-top: 14px;
+			margin-bottom: 24px;
+			font-size: 24px;
+		}
 	}
 
 	.discount__text {
@@ -71,5 +130,9 @@ defineProps({
 		font-weight: 400;
 		font-size: 16px;
 		color: #222528;
+
+		@media (min-width: 768px) {
+			line-height: 150%;
+		}
 	}
 </style>
