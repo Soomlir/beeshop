@@ -47,6 +47,12 @@ const postData = Array.from({ length: 3 }, () => ({
 	padding: 0 20px;
 	padding-top: 68px;
 	padding-bottom: 105px;
+
+	@media (min-width: 768px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 98px 55px 0;
+	}
 }
 
 .reviews__title {
@@ -56,6 +62,10 @@ const postData = Array.from({ length: 3 }, () => ({
 	font-size: 32px;
 	line-height: 38px;
 	color: #222528;
+
+	@media (min-width: 768px) {
+		grid-column: span 2;
+	}
 }
 
 .reviews__heading {
@@ -63,6 +73,12 @@ const postData = Array.from({ length: 3 }, () => ({
 	margin-bottom: 57px;
 	font-size: 16px;
 	color: #5b636b;
+
+	@media (min-width: 768px) {
+		margin-bottom: 0;
+		padding-top: 44px;
+		padding-left: 20px;
+	}
 }
 
 .reviews__link {
@@ -73,6 +89,20 @@ const postData = Array.from({ length: 3 }, () => ({
 	color: #db4e66;
 	text-transform: uppercase;
 	text-decoration: none;
+
+	@media (min-width: 768px) {
+		justify-self: end;
+		padding-top: 44px;
+		padding-right: 11px;
+		font-size: 16px;
+	}
+}
+
+.reviews__posts {
+	@media (min-width: 768px) {
+		grid-column: span 2;
+		padding-top: 11px;
+	}
 }
 
 .post {
@@ -80,6 +110,10 @@ const postData = Array.from({ length: 3 }, () => ({
 	padding: 34px 20px 34px 19px;
 	border-radius: 14px;
 	box-shadow: 0 4px 9px #d3d3d3;
+
+	@media (min-width: 768px) {
+		padding: 36px 60px 0;
+	}
 }
 
 .post__header {
@@ -88,11 +122,22 @@ const postData = Array.from({ length: 3 }, () => ({
 	grid-template-rows: 27px 22px 31px;
 	margin-bottom: 23px;
 	column-gap: 19px;
+
+	@media (min-width: 768px) {
+		grid-template-columns: 121px 1fr;
+		grid-template-rows: 30px 43px 49px;
+	}
 }
 
 .post__image {
 	grid-row: span 3;
 	margin-left: 3px;
+
+	@media (min-width: 768px) {
+		width: 121px;
+		height: 121px;
+		margin-left: 0;
+	}
 }
 
 .post__author-name {
@@ -100,12 +145,23 @@ const postData = Array.from({ length: 3 }, () => ({
 	font-weight: 500;
 	font-size: 20px;
 	color: #222528;
+
+	@media (min-width: 768px) {
+		padding-top: 2px;
+		padding-left: 2px;
+		font-size: 26px;
+	}
 }
 
 .post__date {
 	grid-column: 2 / -1;
 	margin: 0;
 	color: #a5aaaf;
+
+	@media (min-width: 768px) {
+		padding-top: 14px;
+		padding-left: 5px;
+	}
 }
 
 .post__rating {
@@ -117,6 +173,11 @@ const postData = Array.from({ length: 3 }, () => ({
 
 .post__rating-number {
 	font-size: 30px;
+
+	@media (min-width: 768px) {
+		padding-left: 4px;
+		font-size: 41px;
+	}
 }
 
 .post__star {
@@ -125,6 +186,13 @@ const postData = Array.from({ length: 3 }, () => ({
 	height: 18px;
 	margin-left: 6px;
 	background-image: url('/images/icons/star.svg');
+
+	@media (min-width: 768px) {
+		width: 131px;
+		height: 25px;
+		margin-left: 13px;
+		background-image: url('/images/icons/star-tablet.svg');
+	}
 }
 
 .post__text {

@@ -16,6 +16,13 @@
 	background-image: url('/images/preview-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: 0 63px;
+
+	@media (min-width: 768px) {
+		padding: 285px 169px;
+		padding-bottom: 200px;
+		background-image: url('/images/preview-bg-tablet.jpg');
+		background-position: 0 98px;
+	}
 }
 
 .preview__box {
@@ -24,6 +31,11 @@
 	height: 184px;
 	background-color: #f1f1f1;
 	border-radius: 8px;
+
+	@media (min-width: 768px) {
+		width: 429px;
+		height: 236px;
+	}
 }
 
 .preview__button-play {
@@ -31,12 +43,19 @@
 	height: 31px;
 	margin: auto;
 	background-image: url('/images/icons/play-btn.svg');
+	background-repeat: no-repeat;
 	border: none;
 	border-radius: 50%;
 	cursor: pointer;
 
 	&:hover {
 		scale: 1.2;
+	}
+
+	@media (min-width: 768px) {
+		width: 40px;
+		height: 40px;
+		background-size: 40px;
 	}
 }
 </style>

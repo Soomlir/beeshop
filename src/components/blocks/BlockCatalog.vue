@@ -1,38 +1,35 @@
 <template>
-  <section class="catalog">
-    <h2 class="catalog__title">Каталог игр</h2>
-    <p class="catalog__text">Популярные игры</p>
-    <a class="catalog__link" href="#!">Смотреть все игры</a>
-    <ul class="catalog__list game-list">
-      <li
-        class="catalog__item game-list__item"
-        v-for="({ title, image, params, price }, i) in games"
-        :key="i"
-      >
-        <img
-          class="game-list__img"
-          :src="image"
-          :alt="title"
-        />
-        <h3 class="game-list__heading">{{ title }}</h3>
-        <dl class="game-list__options">
-          <div
-            :class="{
-              [`game-list__wrapper game-list__wrapper--${j + 1}`]: termin !== 'age',
-              'game-list__label': termin === 'age',
-            }"
-            v-for="(value, termin, j) in termins"
-            :key="value"
-          >
-            <dt class="game-list__termin">{{ value }}: </dt>
-            <dd class="game-list__data">{{ params[termin] }}</dd>
-          </div>
-        </dl>
-        <p class="game-list__price">{{ price }}₽</p>
-        <button class="game-list__add button">добавить в корзину</button>
-      </li>
-    </ul>
-  </section>
+	<section class="catalog">
+		<h2 class="catalog__title">Каталог игр</h2>
+		<p class="catalog__text">Популярные игры</p>
+		<a class="catalog__link" href="#!">Смотреть все игры</a>
+		<ul class="catalog__list game-list">
+			<li
+				class="catalog__item game-list__item"
+				v-for="({ title, image, params, price }, i) in games"
+				:key="i"
+			>
+				<img class="game-list__img" :src="image" :alt="title" />
+				<h3 class="game-list__heading">{{ title }}</h3>
+				<dl class="game-list__options">
+					<div
+						:class="{
+							[`game-list__wrapper game-list__wrapper--${j + 1}`]:
+								termin !== 'age',
+							'game-list__label': termin === 'age',
+						}"
+						v-for="(value, termin, j) in termins"
+						:key="value"
+					>
+						<dt class="game-list__termin">{{ value }}:</dt>
+						<dd class="game-list__data">{{ params[termin] }}</dd>
+					</div>
+				</dl>
+				<p class="game-list__price">{{ price }}₽</p>
+				<button class="game-list__add button">добавить в корзину</button>
+			</li>
+		</ul>
+	</section>
 </template>
 
 <script setup>
@@ -60,13 +57,19 @@ const games = Array.from({ length: 3 }, () => ({
 }));
 </script>
 
-
 <style lang="scss" scoped>
 .catalog {
 	padding: 0 20px;
 	padding-top: 64px;
 	padding-bottom: 38px;
 	border-bottom: 1px solid #a5aaaf;
+
+	@media (min-width: 768px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		box-sizing: border-box;
+		padding: 56px 55px 62px;
+	}
 }
 
 .catalog__title {
@@ -76,12 +79,23 @@ const games = Array.from({ length: 3 }, () => ({
 	font-size: 32px;
 	line-height: auto;
 	color: #222528;
+
+	@media (min-width: 768px) {
+		grid-column: span 2;
+		margin-bottom: 51px;
+	}
 }
 
 .catalog__text {
 	margin: 0;
 	margin-bottom: 56px;
 	color: #5b636b;
+
+	@media (min-width: 768px) {
+		margin-bottom: 0;
+		padding-bottom: 42px;
+		padding-left: 15px;
+	}
 }
 
 .catalog__link {
@@ -92,12 +106,24 @@ const games = Array.from({ length: 3 }, () => ({
 	color: #db4e66;
 	text-transform: uppercase;
 	text-decoration: none;
+
+	@media (min-width: 768px) {
+		justify-self: end;
+		padding-right: 10px;
+		font-size: 16px;
+	}
 }
 
 .catalog__list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+	@media (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		grid-column: span 2;
+	}
 }
 
 .catalog__item {
@@ -106,10 +132,28 @@ const games = Array.from({ length: 3 }, () => ({
 	padding: 29px 23px 31px;
 	border-radius: 12px;
 	box-shadow: 0 4px 9px 0 #d3d3d3;
+
+	@media (min-width: 768px) {
+		box-sizing: border-box;
+		width: 314px;
+		margin-right: 30px;
+		margin-bottom: 30px;
+		padding: 29px 22px 24px;
+
+		&:nth-child(2) {
+			margin-right: 0;
+		}
+	}
 }
 
 .game-list__img {
 	margin-bottom: 21px;
+
+	@media (min-width: 768px) {
+		width: 272px;
+		height: 324px;
+		margin-bottom: 16px;
+	}
 }
 
 .game-list__heading {
@@ -118,6 +162,10 @@ const games = Array.from({ length: 3 }, () => ({
 	font-weight: 500;
 	font-size: 16px;
 	color: #222528;
+
+	@media (min-width: 768px) {
+		font-size: 18px;
+	}
 }
 
 .game-list__wrapper {
@@ -161,12 +209,20 @@ const games = Array.from({ length: 3 }, () => ({
 		top: -3px;
 		background-image: url('/images/icons/game-card-icon-5.svg');
 	}
+
+	@media (min-width: 768px) {
+		padding-bottom: 9px;
+	}
 }
 
 .game-list__termin,
 .game-list__data {
 	display: inline;
 	margin: 0;
+
+	@media (min-width: 768px) {
+		font-size: 18px;
+	}
 }
 
 .game-list__label {
@@ -184,6 +240,20 @@ const games = Array.from({ length: 3 }, () => ({
 	text-transform: uppercase;
 	background-color: #90c1bf;
 	border-radius: 6px;
+
+	@media (min-width: 768px) {
+		top: 24px;
+		right: 25px;
+		width: 134px;
+		padding: 5px 16px 3px;
+		font-size: 16px;
+		line-height: 22px;
+		text-align: center;
+		color: #fafaf9;
+		text-transform: uppercase;
+		background-color: #90c1bf;
+		border-radius: 6px;
+	}
 }
 
 .game-list__price {
@@ -194,6 +264,11 @@ const games = Array.from({ length: 3 }, () => ({
 	font-size: 24px;
 	text-align: center;
 	color: #db4e66;
+
+	@media (min-width: 768px) {
+		margin-top: 12px;
+		margin-bottom: 16px;
+	}
 }
 
 .game-list__add {
@@ -210,5 +285,13 @@ const games = Array.from({ length: 3 }, () => ({
 	border: none;
 	border-radius: 12px;
 	cursor: pointer;
+
+	@media (min-width: 768px) {
+		width: 264px;
+		margin-left: 2px;
+		padding: 17px 28px 20px;
+		font-weight: 500;
+		font-size: 16px;
+	}
 }
 </style>

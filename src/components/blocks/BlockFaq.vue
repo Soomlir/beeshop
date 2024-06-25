@@ -1,9 +1,7 @@
 <template>
   <section class="faq">
     <h2 class="faq__title">Часто задаваемые вопросы</h2>
-    <div class="faq__contact-us contact-us">
-      <p class="contact-us__text">Есть вопросы? Напишите нам</p>
-    </div>
+
     <dl class="faq__list">
       <template v-for="(item, i) in questions" :key="i">
         <dt
@@ -42,14 +40,8 @@ const questions = Array.from({ length: 6 }, () => ({
 	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 	box-shadow: 0 4px 4px rgba(#000000, 25%);
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: 41px;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		background-color: rgba(0, 0, 0, 0.25);
+	@media (min-width: 768px) {
+		padding: 92px 55px 82px;
 	}
 }
 
@@ -62,44 +54,6 @@ const questions = Array.from({ length: 6 }, () => ({
 	color: #222528;
 }
 
-.faq__contact-us {
-	position: relative;
-	z-index: 1;
-	display: flex;
-	box-sizing: border-box;
-	width: 208px;
-	margin-bottom: 31px;
-	margin-left: auto;
-	padding-left: 69px;
-	color: #222528;
-	background-color: #ffffff;
-	border-radius: 64px;
-	box-shadow: 0 4px 9px #d3d3d3;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 12px;
-		left: 8px;
-		z-index: 100;
-		width: 59px;
-		height: 59px;
-		background-color: #90c1bf;
-		background-image: url('/images/icons/marks.svg');
-		background-repeat: no-repeat;
-		background-position: 50%;
-		border-radius: 50%;
-	}
-}
-
-.contact-us__text {
-	width: 114px;
-	margin: 0;
-	padding: 23px 8px 14px;
-	font-size: 16px;
-	color: inherit;
-}
-
 .faq__list {
 	display: flex;
 	flex-direction: column;
@@ -109,6 +63,10 @@ const questions = Array.from({ length: 6 }, () => ({
 	font-weight: 500;
 	font-size: 20px;
 	color: #222528;
+
+	@media (min-width: 768px) {
+		margin-top: 16px;
+	}
 }
 
 .faq__termin {
@@ -124,6 +82,12 @@ const questions = Array.from({ length: 6 }, () => ({
 		position: absolute;
 		top: 22px;
 		left: 0;
+	}
+
+	@media (min-width: 768px) {
+		padding-bottom: 26px;
+		padding-left: 20px;
+		font-size: 24px;
 	}
 }
 
@@ -143,5 +107,13 @@ const questions = Array.from({ length: 6 }, () => ({
 	background-color: #db4e66;
 	border-radius: 12px;
 	box-shadow: 2px 4px 9px #fbccd4;
+
+	@media (min-width: 768px) {
+		width: 306px;
+		margin-bottom: 0;
+		padding: 18px 32px 19px;
+		font-weight: 500;
+		font-size: 17px;
+	}
 }
 </style>
