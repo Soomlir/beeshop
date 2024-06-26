@@ -51,7 +51,7 @@ const postData = Array.from({ length: 3 }, () => ({
 	@media (min-width: 768px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		padding: 98px 55px 0;
+		padding: 98px 55px 97px;
 	}
 }
 
@@ -112,7 +112,8 @@ const postData = Array.from({ length: 3 }, () => ({
 	box-shadow: 0 4px 9px #d3d3d3;
 
 	@media (min-width: 768px) {
-		padding: 36px 60px 0;
+		margin-bottom: 24px;
+		padding: 36px 59px 65px;
 	}
 }
 
@@ -126,6 +127,7 @@ const postData = Array.from({ length: 3 }, () => ({
 	@media (min-width: 768px) {
 		grid-template-columns: 121px 1fr;
 		grid-template-rows: 30px 43px 49px;
+		margin-bottom: 23px;
 	}
 }
 
@@ -199,11 +201,20 @@ const postData = Array.from({ length: 3 }, () => ({
 	margin: 0;
 	font-size: 16px;
 	color: #222528;
+
+	@media (min-width: 768px) {
+		line-height: 26px;
+	}
 }
 
 .post__link {
 	font-size: 16px;
 	color: #f2b236;
 	text-decoration: none;
+
+	@media (min-width: 768px) {
+		font-size: 20px;
+		text-decoration: underline;
+	}
 }
 </style>

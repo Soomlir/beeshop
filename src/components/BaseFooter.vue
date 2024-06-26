@@ -11,14 +11,14 @@
 		>
 
 		<div class="footer-list__wrapper">
-			<ul class="footer__list">
+			<ul class="footer__list footer__list--1">
 				<li class="footer__item"><a href="#!">Акции и новости</a></li>
 				<li class="footer__item"><a href="#!">Игры для праздника</a></li>
 				<li class="footer__item"><a href="#!">Развивающие игры</a></li>
 				<li class="footer__item"><a href="#!">Игры в дорогу</a></li>
 			</ul>
 
-			<ul class="footer__list">
+			<ul class="footer__lis footer__list--2">
 				<li class="footer__item"><a href="#!">Отзывы</a></li>
 				<li class="footer__item"><a href="#!">Доставка и оплата</a></li>
 				<li class="footer__item"><a href="#!">Возврат</a></li>
@@ -27,7 +27,7 @@
 				<li class="footer__item"><a href="#!">Документы</a></li>
 			</ul>
 
-			<ul class="footer__list">
+			<ul class="footer__list footer__list--3">
 				<li class="footer__item footer__item--accent"><a href="#!">Личный кабинет</a></li>
 				<li class="footer__item"><a href="#!">Партнерам</a></li>
 				<li class="footer__item"><a href="#!">Групповой заказ</a></li>
@@ -47,6 +47,12 @@
 	padding-top: 47px;
 	text-align: center;
 	background: linear-gradient(to right, #f2b236 0%, #ff9c1a 100%);
+
+	@media (min-width: 768px) {
+		display: grid;
+		grid-template-columns: 254px 1fr;
+		grid-template-rows: 25px 25px;
+	}
 }
 
 .footer__link {
@@ -58,6 +64,12 @@
 	margin-left: auto;
 	background-color: #ffcf86;
 	border-radius: 12px;
+
+	@media (min-width: 768px) {
+		grid-row: span 2;
+		margin-right: 0;
+		margin-left: 55px;
+	}
 }
 
 .footer__logo {
@@ -75,10 +87,23 @@
 
 .footer__tel {
 	margin-bottom: 6px;
+
+	@media (min-width: 768px) {
+		margin-bottom: 0;
+		padding-left: 30px;
+		text-align: left;
+	}
 }
 
 .footer__email {
 	margin-bottom: 50px;
+
+	@media (min-width: 768px) {
+		grid-column: 2 / -1;
+		margin-bottom: 0;
+		padding-left: 31px;
+		text-align: left;
+	}
 }
 
 .footer ul {
@@ -100,12 +125,38 @@
 	padding-right: 20px;
 	padding-bottom: 20px;
 	padding-left: 20px;
+
+	@media (min-width: 768px) {
+		grid-column: span 2;
+		grid-template-columns: 189px 193px 230px;
+		grid-template-rows: 292px;
+		padding: 0 55px;
+	}
 }
 
 .footer__list {
 	margin: 0;
 	padding: 0;
 	text-align: left;
+
+	@media (min-width: 768px) {
+		&--1 {
+			padding-top: 26px;
+		}
+
+		&--2 {
+			margin: 0;
+			padding: 0;
+			padding-top: 25px;
+			padding-left: 10px;
+			text-align: left;
+		}
+
+		&--3 {
+			padding-top: 25px;
+			text-align: left;
+		}
+	}
 }
 
 .footer__item {
@@ -120,6 +171,13 @@
 	padding: 25px 64px;
 	color: #ced0d2;
 	background-color: #222528;
+
+	@media (min-width: 768px) {
+		display: flex;
+		justify-content: space-between;
+		grid-column: span 2;
+		padding: 29px 55px;
+	}
 }
 
 .footer__political p {

@@ -12,8 +12,15 @@
 			>
 				Лаборатория игр
 			</p>
-			<a href="#!">
-				<img class="header__logo" src="/images/icons/logo-tablet.svg" alt="">
+			<a class="header__logo" href="#!">
+				<picture>
+					<source srcset="/images/icons/logo-desktop.svg" media="(min-width: 1440px)" />
+					<img
+						class="header__logo-img"
+						src="/images/icons/logo-tablet.svg"
+						alt=""
+					/>
+				</picture>
 			</a>
 			<div class="header__menu-wrapper">
 				<button class="button-icon button-icon--menu"></button>
@@ -34,6 +41,13 @@ const route = useRoute();
 </script>
 
 <style lang="scss" scoped>
+.header {
+	@media (min-width: 1440px) {
+		display: flex;
+		background: linear-gradient(92.55deg, #f2b236 32.31%, #ff9c1a 64.34%);
+	}
+}
+
 .header__navigation {
 	position: relative;
 	display: flex;
@@ -44,11 +58,23 @@ const route = useRoute();
 	box-shadow: 0 0 7px #ffdba6;
 
 	@media (min-width: 768px) {
+		order: -2;
 		padding: 42px 54px 36px;
+	}
+
+	@media (min-width: 1440px) {
+		padding: 42px 137px 30px 156px;
+		box-shadow: none;
 	}
 }
 
 .header__logo {
+	@media (min-width: 1440px) {
+		order: -2;
+	}
+}
+
+.header__logo-img {
 	display: none;
 
 	@media (min-width: 768px) {
@@ -63,6 +89,10 @@ const route = useRoute();
 	@media (min-width: 768px) {
 		width: 66px;
 		height: 66px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-left: auto;
 	}
 }
 
@@ -138,6 +168,12 @@ const route = useRoute();
 	@media (min-width: 768px) {
 		padding: 22px 55px 26px;
 		text-align: left;
+		background: transparent;
+	}
+
+	@media (min-width: 1440px) {
+		order: -1;
+		box-shadow: none;
 	}
 }
 
