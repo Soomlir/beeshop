@@ -1,6 +1,13 @@
 <template>
 	<header class="header">
 		<div class="header__navigation">
+			<div class="header__search-wrapper">
+				<input
+					class="header__search"
+					type="search"
+					placeholder="Поиск по сайту...."
+				/>
+			</div>
 			<div class="header__cart-wrapper">
 				<button class="button-icon button-icon--cart">
 					<span class="cart-counter"></span>
@@ -14,7 +21,10 @@
 			</p>
 			<a class="header__logo" href="#!">
 				<picture>
-					<source srcset="/images/icons/logo-desktop.svg" media="(min-width: 1440px)" />
+					<source
+						srcset="/images/icons/logo-desktop.svg"
+						media="(min-width: 1440px)"
+					/>
 					<img
 						class="header__logo-img"
 						src="/images/icons/logo-tablet.svg"
@@ -23,7 +33,10 @@
 				</picture>
 			</a>
 			<div class="header__menu-wrapper">
-				<button class="button-icon button-icon--menu"></button>
+				<button class="button-icon button-icon--profile">
+					<span class="cart-counter"></span>
+				</button>
+				<button @click="openMenu" class="button-icon button-icon--menu"></button>
 			</div>
 		</div>
 		<div class="contact-us">
@@ -31,11 +44,14 @@
 				8-(000)-000-00-00 МСК (9-21)</a
 			>
 		</div>
+		<BlockMenu />
 	</header>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router';
+
+import BlockMenu from './blocks/BlockMenu.vue';
 
 const route = useRoute();
 </script>
@@ -44,6 +60,7 @@ const route = useRoute();
 .header {
 	@media (min-width: 1440px) {
 		display: flex;
+		padding: 42px 135px 30px 156px;
 		background: linear-gradient(92.55deg, #f2b236 32.31%, #ff9c1a 64.34%);
 	}
 }
@@ -63,8 +80,7 @@ const route = useRoute();
 	}
 
 	@media (min-width: 1440px) {
-		padding: 42px 137px 30px 156px;
-		box-shadow: none;
+		display: contents;
 	}
 }
 
@@ -79,12 +95,18 @@ const route = useRoute();
 
 	@media (min-width: 768px) {
 		display: block;
+		margin-right: 159px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-right: 0;
 	}
 }
 
 .header__cart-wrapper {
 	width: 40px;
 	height: 40px;
+	margin-right: auto;
 
 	@media (min-width: 768px) {
 		width: 66px;
@@ -92,7 +114,45 @@ const route = useRoute();
 	}
 
 	@media (min-width: 1440px) {
-		margin-left: auto;
+		width: 45px;
+		height: 45px;
+		margin-top: 14px;
+		margin-left: 24px;
+	}
+}
+
+.header__search-wrapper {
+	@media (min-width: 1440px) {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 24px;
+			right: 17px;
+			width: 24px;
+			height: 24px;
+			mask: url('/images/icons/search.svg');
+			background-color: #a5aaaf;
+		}
+	}
+}
+
+.header__search {
+	display: none;
+
+	@media (min-width: 1440px) {
+		display: flex;
+		width: 327px;
+		height: 45px;
+		margin-top: 14px;
+		margin-left: 7px;
+		padding: 10px 23px;
+		padding-right: 50px;
+		font-size: 16px;
+		color: #a5aaaf;
+		border: none;
+		border-radius: 26px;
 	}
 }
 
@@ -112,6 +172,11 @@ const route = useRoute();
 		border-radius: 12px;
 	}
 
+	@media (min-width: 1440px) {
+		width: 45px;
+		height: 46px;
+	}
+
 	&--cart {
 		position: relative;
 		background-image: url('/images/icons/cart.svg');
@@ -120,6 +185,13 @@ const route = useRoute();
 		@media (min-width: 768px) {
 			background-position: 6px 8px;
 			background-size: 48px;
+		}
+
+		@media (min-width: 1440px) {
+			width: 45px;
+			height: 45px;
+			background-position: 4px 6px;
+			background-size: 32px;
 		}
 	}
 
@@ -130,6 +202,25 @@ const route = useRoute();
 		@media (min-width: 768px) {
 			background-position: 9px 16px;
 			background-size: 46px;
+		}
+
+		@media (min-width: 1440px) {
+			display: none;
+		}
+	}
+
+	&--profile {
+		display: none;
+
+		@media (min-width: 1440px) {
+			position: relative;
+			display: flex;
+			width: 45px;
+			height: 45px;
+			margin-top: 14px;
+			margin-left: 25px;
+			background-image: url('/images/icons/user.svg');
+			background-position: 6px 6px;
 		}
 	}
 }
@@ -149,6 +240,13 @@ const route = useRoute();
 		right: 6px;
 		width: 20px;
 		height: 20px;
+	}
+
+	@media (min-width: 1440px) {
+		top: 4px;
+		right: 4px;
+		width: 14px;
+		height: 14px;
 	}
 }
 
@@ -173,6 +271,8 @@ const route = useRoute();
 
 	@media (min-width: 1440px) {
 		order: -1;
+		margin-right: 1px;
+		padding: 27px 20px 20px 91px;
 		box-shadow: none;
 	}
 }
