@@ -44,7 +44,7 @@
 				8-(000)-000-00-00 МСК (9-21)</a
 			>
 		</div>
-		<BlockMenu />
+		<BlockMenu :openMenu />
 	</header>
 </template>
 
