@@ -44,16 +44,20 @@
 				8-(000)-000-00-00 МСК (9-21)</a
 			>
 		</div>
-		<BlockMenu :openMenu />
+		<BlockMenu :openMenu :class="{ 'menu--active': isOpen }"/>
 	</header>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router';
-
 import BlockMenu from './blocks/BlockMenu.vue';
+import { ref } from 'vue';
+const isOpen = ref(false);
 
 const route = useRoute();
+const openMenu = () => {
+	return isOpen.value = true;
+};
 </script>
 
 <style lang="scss" scoped>
