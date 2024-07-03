@@ -44,7 +44,7 @@
 				8-(000)-000-00-00 МСК (9-21)</a
 			>
 		</div>
-		<BlockMenu :openMenu :class="{ 'menu--active': isOpen }"/>
+		<BlockMenu :openMenu @click="closeMenu" :class="{ 'menu--active': isOpen }"/>
 	</header>
 </template>
 
@@ -55,9 +55,8 @@ import { ref } from 'vue';
 const isOpen = ref(false);
 
 const route = useRoute();
-const openMenu = () => {
-	return isOpen.value = true;
-};
+const openMenu = () => isOpen.value = true;
+const closeMenu = () => isOpen.value = false;
 </script>
 
 <style lang="scss" scoped>
