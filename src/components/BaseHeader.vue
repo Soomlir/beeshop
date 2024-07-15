@@ -63,7 +63,10 @@ const closeMenu = () => isOpen.value = false;
 .header {
 	@media (min-width: 1440px) {
 		display: flex;
-		padding: 42px 135px 30px 156px;
+		flex-wrap: wrap;
+		height: 214px;
+		height: auto;
+		padding-top: 42px;
 		background: linear-gradient(92.55deg, #f2b236 32.31%, #ff9c1a 64.34%);
 	}
 }
@@ -90,6 +93,7 @@ const closeMenu = () => isOpen.value = false;
 .header__logo {
 	@media (min-width: 1440px) {
 		order: -2;
+		padding-bottom: 30px;
 	}
 }
 
@@ -103,6 +107,7 @@ const closeMenu = () => isOpen.value = false;
 
 	@media (min-width: 1440px) {
 		margin-right: 0;
+		padding-left: 156px;
 	}
 }
 
@@ -119,8 +124,9 @@ const closeMenu = () => isOpen.value = false;
 	@media (min-width: 1440px) {
 		width: 45px;
 		height: 45px;
+		margin: 0;
 		margin-top: 14px;
-		margin-left: 24px;
+		margin-left: 25px;
 	}
 }
 
@@ -276,6 +282,7 @@ const closeMenu = () => isOpen.value = false;
 		order: -1;
 		margin-right: 1px;
 		padding: 27px 20px 20px 91px;
+		padding-bottom: 0;
 		box-shadow: none;
 	}
 }

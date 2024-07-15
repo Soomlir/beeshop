@@ -2,7 +2,7 @@
 	<section class="features">
 		<h2 class="visually-hidden">Наши преимущества</h2>
 		<p class="features__promo">
-			Квест – возможность подарить детям незабываемые эмоции!
+			Квест – возможность подарить <br> детям незабываемые эмоции!
 		</p>
 		<ul class="features__list">
 			<li class="features__item features__item--1">
@@ -70,6 +70,12 @@
 			display: none;
 		}
 	}
+
+	@media (min-width: 1440px) {
+		padding-top: 75px;
+		padding-right: 137px;
+		padding-left: 138px;
+	}
 }
 
 .features__promo {
@@ -79,8 +85,21 @@
 	font-size: 32px;
 	color: #222528;
 
+	br {
+		display: none;
+	}
+
 	@media (min-width: 768px) {
 		margin-top: 69px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 92px;
+		font-size: 44px;
+
+		br {
+			display: block;
+		}
 	}
 }
 
@@ -96,6 +115,11 @@
 
 	@media (min-width: 768px) {
 		margin-bottom: 20px;
+	}
+
+	@media (min-width: 1440px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
@@ -161,6 +185,27 @@
 		&::before {
 			width: 140px;
 			height: 140px;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		width: 440px;
+		margin-bottom: 37px;
+
+		&--1 {
+			order: -2;
+		}
+
+		&--2 {
+			order: 1;
+		}
+
+		&--3 {
+			order: -1;
+		}
+
+		&--4 {
+			order: 2;
 		}
 	}
 }

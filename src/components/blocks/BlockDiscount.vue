@@ -35,6 +35,11 @@ defineProps({
 		grid-template-columns: 1fr 1fr;
 		padding: 64px 54px 82px;
 	}
+
+	@media (min-width: 1440px) {
+		padding-top: 30px;
+		padding-left: 138px;
+	}
 }
 
 .discount__title {
@@ -48,6 +53,10 @@ defineProps({
 		margin-top: 3px;
 		margin-bottom: 0;
 		margin-left: 16px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-top: 21px;
 	}
 }
 
@@ -64,6 +73,11 @@ defineProps({
 		margin-right: 11px;
 		font-size: 16px;
 	}
+
+	@media (min-width: 1440px) {
+		margin-top: 21px;
+		margin-right: 95px;
+	}
 }
 
 .discount__list {
@@ -75,6 +89,10 @@ defineProps({
 	@media (min-width: 768px) {
 		grid-column: span 2;
 		margin-top: 42px;
+	}
+
+	@media (min-width: 1440px) {
+		display: flex;
 	}
 }
 
@@ -100,6 +118,10 @@ defineProps({
 			height: 118px;
 			background-image: var(--background, none);
 		}
+	}
+
+	@media (min-width: 1440px) {
+		width: 546px;
 	}
 }
 

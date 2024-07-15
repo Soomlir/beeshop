@@ -20,16 +20,21 @@
 	background-repeat: no-repeat;
 	box-shadow: 0 4px 4px 0 rgba(#000000, 25%);
 
-	@media (min-width: 768px) {
-		padding: 265px 54px 246px;
-		background-image: url('/images/promo-bg-tablet.jpg');
-	}
-
 	&::before {
 		content: '';
 		inset: 0;
 		position: absolute;
 		background-color: rgba(#000000, 54%);
+	}
+
+	@media (min-width: 768px) {
+		padding: 265px 54px 246px;
+		background-image: url('/images/promo-bg-tablet.jpg');
+	}
+
+	@media (min-width: 1440px) {
+		padding: 235px 276px 156px;
+		background-image: url('/images/promo-bg-desktop.jpg');
 	}
 }
 
@@ -47,6 +52,11 @@
 		font-size: 50px;
 		line-height: 59px;
 	}
+
+	@media (min-width: 1440px) {
+		padding: 0;
+		text-align: center;
+	}
 }
 
 .promo__description {
@@ -60,6 +70,18 @@
 	@media (min-width: 768px) {
 		padding-bottom: 45px;
 		font-size: 24px;
+	}
+
+	@media (min-width: 1440px) {
+		padding-top: 19px;
+		padding-bottom: 48px;
+		font-weight: 400;
+		font-size: 16px;
+		text-align: center;
+
+		br {
+			display: none;
+		}
 	}
 }
 
@@ -83,6 +105,10 @@
 		width: 306px;
 		font-size: 17px;
 		border-radius: 14px;
+	}
+
+	@media (min-width: 1440px) {
+		margin: 0 292px;
 	}
 }
 </style>

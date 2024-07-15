@@ -65,6 +65,10 @@ defineEmits(['closeMenu']);
 .menu {
 	display: none;
 
+	@media (min-width: 1440px) {
+		display: flex;
+	}
+
 	&--active {
 		position: absolute;
 		z-index: 100;
@@ -91,6 +95,10 @@ defineEmits(['closeMenu']);
 		grid-template-rows: 173px 100px;
 		width: 100%;
 	}
+
+	@media (min-width: 1440px) {
+		display: block;
+	}
 }
 
 .menu__close {
@@ -109,12 +117,15 @@ defineEmits(['closeMenu']);
 	cursor: pointer;
 
 	@media (min-width: 768px) {
-		grid-column: 2 / -1;
 		width: 66px;
 		height: 66px;
 		margin-top: 42px;
 		margin-right: 54px;
 		background-image: url('/images/icons/crest-tablet.svg');
+	}
+
+	@media (min-width: 1440px) {
+		display: none;
 	}
 }
 
@@ -127,7 +138,12 @@ defineEmits(['closeMenu']);
 
 	@media (min-width: 768px) {
 		grid-template-columns: 66px 1fr 1fr;
+		width: 662px;
 		padding: 13px 53px;
+	}
+
+	@media (min-width: 1440px) {
+		display: none;
 	}
 }
 
@@ -214,6 +230,16 @@ defineEmits(['closeMenu']);
 		margin-right: 54px;
 		margin-left: 54px;
 	}
+
+	@media (min-width: 1440px) {
+		display: flex;
+		display: grid;
+		grid-template-columns: 700px 1fr;
+		width: 1440px;
+		height: 69px;
+		margin: 0;
+		background-color: #fafaf9;
+	}
 }
 
 .menu__list {
@@ -221,10 +247,24 @@ defineEmits(['closeMenu']);
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+	@media (min-width: 1440px) {
+		display: flex;
+		flex-wrap: wrap;
+		width: auto;
+	}
+
+	@media (min-width: 1440px) {
+		grid-column: 2 / -1;
+	}
 }
 
 .menu__item {
 	border-bottom: 1px solid #a5aaaf;
+
+	@media (min-width: 1440px) {
+		border: none;
+	}
 }
 
 .menu__link {
@@ -238,6 +278,19 @@ defineEmits(['closeMenu']);
 	color: $base-white-color;
 	text-decoration: none;
 
+	@media (min-width: 768px) {
+		padding: 27px 0;
+		font-size: 24px;
+	}
+
+	@media (min-width: 1440px) {
+		padding: 22px 0;
+		padding-right: 27px;
+		padding-left: 27px;
+		font-size: 16px;
+		color: #222528;
+	}
+
 	&--bullet {
 		position: absolute;
 		right: 140px;
@@ -246,12 +299,32 @@ defineEmits(['closeMenu']);
 		height: 15px;
 		background-color: #db4e66;
 		border-radius: 50%;
+
+		@media (min-width: 768px) {
+			right: 413px;
+			bottom: 27px;
+			width: 21px;
+			height: 21px;
+		}
+
+		@media (min-width: 1440px) {
+			display: none;
+		}
 	}
 
 	&--arrow {
 		background-image: url('/images/icons/arrow-menu-mobile.svg');
 		background-repeat: no-repeat;
 		background-position: 303px 50%;
+
+		@media (min-width: 768px) {
+			background-image: url('/images/icons/arrow-menu-tablet.svg');
+			background-position: 603px 58%;
+		}
+
+		@media (min-width: 1440px) {
+			display: none;
+		}
 	}
 
 	&--current {
@@ -263,12 +336,36 @@ defineEmits(['closeMenu']);
 		@media (min-width: 768px) {
 			margin-right: -54px;
 			margin-left: -54px;
+			padding-right: 54px;
+			padding-left: 54px;
+		}
+
+		@media (min-width: 1440px) {
+			margin: 0;
+		}
+
+		@media (min-width: 1440px) {
+			background: none;
 		}
 	}
 }
 
 .menu__list-inner {
+	margin: 0;
+	padding: 0;
 	list-style: none;
+
+	@media (min-width: 768px) {
+		margin-top: 37px;
+		padding-bottom: 24px;
+		padding-left: 50px;
+		font-size: 24px;
+		border-bottom: 1px solid #a5aaaf;
+	}
+
+	@media (min-width: 1440px) {
+		display: none;
+	}
 }
 
 .menu__link-inner {
@@ -279,6 +376,11 @@ defineEmits(['closeMenu']);
 	line-height: 24px;
 	color: $base-white-color;
 	text-decoration: none;
+
+	@media (min-width: 768px) {
+		padding-bottom: 47px;
+		font-size: 24px;
+	}
 }
 
 .menu__icon-list {
@@ -289,10 +391,22 @@ defineEmits(['closeMenu']);
 	padding-bottom: 20px;
 	padding-left: 0;
 	list-style: none;
+
+	@media (min-width: 768px) {
+		padding-top: 81px;
+	}
+
+	@media (min-width: 1440px) {
+		display: none;
+	}
 }
 
 .menu__icon-item {
 	margin-right: 16px;
+
+	@media (min-width: 768px) {
+		margin-right: 24px;
+	}
 }
 
 .menu__icon {
@@ -301,6 +415,11 @@ defineEmits(['closeMenu']);
 	height: 52px;
 	background-color: #90c1bf;
 	border-radius: 8px;
+
+	@media (min-width: 768px) {
+		width: 64px;
+		height: 64px;
+	}
 
 	&--vk {
 		background-image: url('/images/icons/vk.svg');
@@ -330,5 +449,17 @@ defineEmits(['closeMenu']);
 	background-position: 288px 50%;
 	border: none;
 	border-radius: 30px;
+
+	@media (min-width: 768px) {
+		width: 392px;
+		padding: 31px 22px;
+		font-size: 24px;
+		background-image: url('/images/icons/search-input-tablet.svg');
+		background-position: 345px 50%;
+	}
+
+	@media (min-width: 1440px) {
+		display: none;
+	}
 }
 </style>

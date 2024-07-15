@@ -70,6 +70,12 @@ const games = Array.from({ length: 3 }, () => ({
 		box-sizing: border-box;
 		padding: 56px 55px 62px;
 	}
+
+	@media (min-width: 1440px) {
+		grid-template-rows: 50px 50px;
+		padding: 81px 138px 50px;
+		padding-right: 137px;
+	}
 }
 
 .catalog__title {
@@ -84,6 +90,11 @@ const games = Array.from({ length: 3 }, () => ({
 		grid-column: span 2;
 		margin-bottom: 51px;
 	}
+
+	@media (min-width: 1440px) {
+		grid-column: 1/2;
+		font-size: 44px;
+	}
 }
 
 .catalog__text {
@@ -95,6 +106,13 @@ const games = Array.from({ length: 3 }, () => ({
 		margin-bottom: 0;
 		padding-bottom: 42px;
 		padding-left: 15px;
+	}
+
+	@media (min-width: 1440px) {
+		grid-column: 1/ -1;
+		grid-row: 2 /-1;
+		padding: 0;
+		padding-top: 20px;
 	}
 }
 
@@ -112,6 +130,13 @@ const games = Array.from({ length: 3 }, () => ({
 		padding-right: 10px;
 		font-size: 16px;
 	}
+
+	@media (min-width: 1440px) {
+		grid-column: 2/-1;
+		grid-row: 1 /-1;
+		margin-bottom: 0;
+		padding-top: 32px;
+	}
 }
 
 .catalog__list {
@@ -123,6 +148,10 @@ const games = Array.from({ length: 3 }, () => ({
 		display: flex;
 		flex-wrap: wrap;
 		grid-column: span 2;
+	}
+
+	@media (min-width: 1440px) {
+		padding-top: 82px;
 	}
 }
 
@@ -141,6 +170,19 @@ const games = Array.from({ length: 3 }, () => ({
 		padding: 29px 22px 24px;
 
 		&:nth-child(2) {
+			margin-right: 0;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		width: 365px;
+		padding: 24px 25px 29px;
+
+		&:nth-child(2) {
+			margin-right: 30px;
+		}
+
+		&:nth-child(3) {
 			margin-right: 0;
 		}
 	}

@@ -23,6 +23,12 @@
 		background-image: url('/images/preview-bg-tablet.jpg');
 		background-position: 0 98px;
 	}
+
+	@media (min-width: 1440px) {
+		padding: 408px 337px 256px;
+		background-image: url('/images/preview-bg-desktop.jpg');
+		background-position: 0 82px;
+	}
 }
 
 .preview__box {
@@ -35,6 +41,11 @@
 	@media (min-width: 768px) {
 		width: 429px;
 		height: 236px;
+	}
+
+	@media (min-width: 1440px) {
+		width: 765px;
+		height: 420px;
 	}
 }
 
@@ -56,6 +67,13 @@
 		width: 40px;
 		height: 40px;
 		background-size: 40px;
+	}
+
+	@media (min-width: 1440px) {
+		width: 70px;
+		height: 70px;
+		background-image: url('/images/icons/play-btn-desktop.svg');
+		background-size: 70px;
 	}
 }
 </style>
