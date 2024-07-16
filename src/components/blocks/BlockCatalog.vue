@@ -9,7 +9,7 @@
 				v-for="({ title, image, params, price }, i) in games"
 				:key="i"
 			>
-				<img class="game-list__img" :src="image" :alt="title" />
+				<app-picture class="catalog__picture" v-bind="image" />
 				<h3 class="game-list__heading">{{ title }}</h3>
 				<dl class="game-list__options">
 					<div
@@ -33,6 +33,8 @@
 </template>
 
 <script setup>
+import AppPicture from '@/components/blocks/AppPicture.vue';
+
 const termins = {
 	time: 'Время игры',
 	players: 'Кол-во игроков',
@@ -44,7 +46,12 @@ const termins = {
 
 const games = Array.from({ length: 3 }, () => ({
 	title: 'Настольная игра “Сказочное королевство” с дополненной реальностью',
-	image: '/images/game-card-1.jpg',
+	image: {
+		name: 'game-card-1',
+		sizes: [375],
+		tabletSizes: [768],
+		desktopSizes: [1440],
+	},
 	params: {
 		time: '60-90 мин',
 		players: '2-6',

@@ -9,7 +9,7 @@
           :class="{ 'faq__termin--opened': item.opened }"
           @click="item.opened = !item.opened"
         >
-          {{ item.question }}
+          {{ item.question[i] }}
         </dt>
         <dd
           class="faq__definition"
@@ -25,7 +25,14 @@
 
 <script setup>
 const questions = Array.from({ length: 6 }, () => ({
-	question: 'Что такое игра-квест?',
+	question: [
+		'Что такое игра-квест?',
+		'А это сложно?',
+		'Сколько длится такая игра?',
+		'Сколько участников требуется?',
+		'Почему квесты такие популярные?',
+		'Вы поможете подобрать игру?',
+	],
 	answer: 'Это такая игра, типа квест',
 	opened: false,
 }));
@@ -43,6 +50,10 @@ const questions = Array.from({ length: 6 }, () => ({
 	@media (min-width: 768px) {
 		padding: 92px 55px 82px;
 	}
+
+	@media (min-width: 1440px) {
+		padding: 88px 138px 82px;
+	}
 }
 
 .faq__title {
@@ -52,6 +63,10 @@ const questions = Array.from({ length: 6 }, () => ({
 	font-weight: 500;
 	font-size: 32px;
 	color: #222528;
+
+	@media (min-width: 1440px) {
+		font-size: 44px;
+	}
 }
 
 .faq__list {
@@ -88,6 +103,10 @@ const questions = Array.from({ length: 6 }, () => ({
 		padding-bottom: 26px;
 		padding-left: 20px;
 		font-size: 24px;
+	}
+
+	@media (min-width: 1440px) {
+		font-size: 29px;
 	}
 }
 

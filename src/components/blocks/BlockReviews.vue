@@ -53,6 +53,11 @@ const postData = Array.from({ length: 3 }, () => ({
 		grid-template-columns: 1fr 1fr;
 		padding: 98px 55px 97px;
 	}
+
+	@media (min-width: 1440px) {
+		grid-template-rows: 50px 50px;
+		padding: 117px 138px 82px;
+	}
 }
 
 .reviews__title {
@@ -66,6 +71,11 @@ const postData = Array.from({ length: 3 }, () => ({
 	@media (min-width: 768px) {
 		grid-column: span 2;
 	}
+
+	@media (min-width: 1440px) {
+		grid-column: 1 / 2;
+		font-size: 44px;
+	}
 }
 
 .reviews__heading {
@@ -78,6 +88,11 @@ const postData = Array.from({ length: 3 }, () => ({
 		margin-bottom: 0;
 		padding-top: 44px;
 		padding-left: 20px;
+	}
+
+	@media (min-width: 1440px) {
+		padding-top: 22px;
+		padding-left: 10px;
 	}
 }
 
@@ -96,12 +111,25 @@ const postData = Array.from({ length: 3 }, () => ({
 		padding-right: 11px;
 		font-size: 16px;
 	}
+
+	@media (min-width: 1440px) {
+		grid-column: 2 / -1;
+		grid-row: 1 / -1;
+		padding-top: 27px;
+	}
 }
 
 .reviews__posts {
 	@media (min-width: 768px) {
 		grid-column: span 2;
 		padding-top: 11px;
+	}
+
+	@media (min-width: 1440px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding-top: 54px;
+		gap: 35px;
 	}
 }
 
@@ -114,6 +142,12 @@ const postData = Array.from({ length: 3 }, () => ({
 	@media (min-width: 768px) {
 		margin-bottom: 24px;
 		padding: 36px 59px 65px;
+	}
+
+	@media (min-width: 1440px) {
+		box-sizing: border-box;
+		width: 564px;
+		padding: 36px 36px 55px 46px;
 	}
 }
 
