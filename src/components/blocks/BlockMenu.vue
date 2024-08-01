@@ -17,45 +17,47 @@ defineEmits(['closeMenu']);
 				</div>
 			</div>
 			<nav class="menu__nav">
-				<ul class="menu__list">
-					<li class="menu__item">
-						<a class="menu__link menu__link--current" href="#!">Каталог</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#!"
-							>Акции и новости<span class="menu__link--bullet"></span></a
-						>
-					</li>
-					<li class="menu__item"><a class="menu__link" href="#!">Отзывы</a></li>
-					<li class="menu__item">
-						<a class="menu__link" href="#!">Доставка и оплата</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link menu__link--arrow" href="#!">О компании</a>
-						<ul class="menu__list-inner">
-							<li><a class="menu__link-inner" href="#!">О нас</a></li>
-							<li><a class="menu__link-inner" href="#!">Контакты</a></li>
-							<li><a class="menu__link-inner" href="#!">Документы</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="menu__icon-list">
-					<li class="menu__icon-item">
-						<a class="menu__icon menu__icon--vk" href="#!"
-							><span class="visually-hidden">Vk</span></a
-						>
-					</li>
-					<li class="menu__icon-item">
-						<a class="menu__icon menu__icon--insta" href="#!"
-							><span class="visually-hidden">Instagram</span></a
-						>
-					</li>
-				</ul>
-				<input
-					class="menu__search"
-					type="search"
-					placeholder="Поиск по сайту..."
-				/>
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link menu__link--current" href="#!">Каталог</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#!"
+								>Акции и новости<span class="menu__link--bullet"></span
+							></a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#!">Отзывы</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#!">Доставка и оплата</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link menu__link--arrow" href="#!">О компании</a>
+							<ul class="menu__list-inner">
+								<li><a class="menu__link-inner" href="#!">О нас</a></li>
+								<li><a class="menu__link-inner" href="#!">Контакты</a></li>
+								<li><a class="menu__link-inner" href="#!">Документы</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="menu__icon-list">
+						<li class="menu__icon-item">
+							<a class="menu__icon menu__icon--vk" href="#!"
+								><span class="visually-hidden">Vk</span></a
+							>
+						</li>
+						<li class="menu__icon-item">
+							<a class="menu__icon menu__icon--insta" href="#!"
+								><span class="visually-hidden">Instagram</span></a
+							>
+						</li>
+					</ul>
+					<input
+						class="menu__search"
+						type="search"
+						placeholder="Поиск по сайту..."
+					/>
 			</nav>
 		</div>
 	</div>
@@ -67,6 +69,8 @@ defineEmits(['closeMenu']);
 
 	@media (min-width: 1440px) {
 		display: flex;
+		width: 100%;
+		background-color: #fafaf9;
 	}
 
 	&--active {
@@ -233,12 +237,8 @@ defineEmits(['closeMenu']);
 
 	@media (min-width: 1440px) {
 		display: flex;
-		display: grid;
 		grid-template-columns: 700px 1fr;
-		width: 1440px;
-		height: 69px;
 		margin: 0;
-		background-color: #fafaf9;
 	}
 }
 

@@ -1,5 +1,6 @@
 <template>
 	<header class="header">
+		<div class="header__wrapper">
 		<div class="header__navigation">
 			<div class="header__search-wrapper">
 				<input
@@ -45,6 +46,7 @@
 			>
 		</div>
 		<BlockMenu :openMenu @click="closeMenu" :class="{ 'menu--active': isOpen }"/>
+	</div>
 	</header>
 </template>
 
@@ -62,12 +64,20 @@ const closeMenu = () => isOpen.value = false;
 <style lang="scss" scoped>
 .header {
 	@media (min-width: 1440px) {
+		background: linear-gradient(92.55deg, #f2b236 32.31%, #ff9c1a 64.34%);
+	}
+}
+
+.header__wrapper {
+	@media (min-width: 1440px) {
 		display: flex;
 		flex-wrap: wrap;
+		max-width: 1440px;
 		height: 214px;
 		height: auto;
+		margin-right: auto;
+		margin-left: auto;
 		padding-top: 42px;
-		background: linear-gradient(92.55deg, #f2b236 32.31%, #ff9c1a 64.34%);
 	}
 }
 
