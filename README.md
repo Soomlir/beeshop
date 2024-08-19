@@ -1,31 +1,9 @@
-# vue3-simple-boilerplate
+# Учебный проект beeshop
 
-This template should help get you started developing with Vue 3 in Vite.
+Используемые технологии:
+- Vue 3
+- Vite 
+- Scss
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm ci
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint
-
-```sh
-npm run lint
-```
+Опубликованная версия:
+[beeshop](https://beeshop.vercel.app/)
