@@ -18,7 +18,7 @@
 				<li class="footer__item"><a href="#!">Игры в дорогу</a></li>
 			</ul>
 
-			<ul class="footer__lis footer__list--2">
+			<ul class="footer__list footer__list--2">
 				<li class="footer__item"><a href="#!">Отзывы</a></li>
 				<li class="footer__item"><a href="#!">Доставка и оплата</a></li>
 				<li class="footer__item"><a href="#!">Возврат</a></li>
@@ -53,6 +53,12 @@
 		grid-template-columns: 254px 1fr;
 		grid-template-rows: 25px 25px;
 	}
+
+	@media (min-width: 1440px) {
+		grid-template-columns: 265px 1fr;
+		grid-template-rows: 76px 100px;
+		padding: 58px 138px 10px;
+	}
 }
 
 .footer__link {
@@ -69,6 +75,13 @@
 		grid-row: span 2;
 		margin-right: 0;
 		margin-left: 55px;
+	}
+
+	@media (min-width: 1440px) {
+		width: 265px;
+		height: 76px;
+		margin: 0;
+		border-radius: 10px;
 	}
 }
 
@@ -93,16 +106,24 @@
 		padding-left: 30px;
 		text-align: left;
 	}
+
+	@media (min-width: 1440px) {
+		grid-row: 2 / 2;
+	}
 }
 
 .footer__email {
-	margin-bottom: 50px;
+	margin-bottom: 49px;
 
 	@media (min-width: 768px) {
 		grid-column: 2 / -1;
 		margin-bottom: 0;
 		padding-left: 31px;
 		text-align: left;
+	}
+
+	@media (min-width: 1440px) {
+		grid-row: 3 / 1;
 	}
 }
 
@@ -123,7 +144,7 @@
 	grid-template-columns: 189px 145px;
 	grid-template-rows: 184px 1fr;
 	padding-right: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 19px;
 	padding-left: 20px;
 
 	@media (min-width: 768px) {
@@ -168,7 +189,7 @@
 }
 
 .footer__political {
-	padding: 25px 64px;
+	padding: 28px 64px 25px;
 	color: #ced0d2;
 	background-color: #222528;
 

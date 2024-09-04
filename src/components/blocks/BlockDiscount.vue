@@ -37,8 +37,7 @@ defineProps({
 	}
 
 	@media (min-width: 1440px) {
-		padding-top: 30px;
-		padding-left: 138px;
+		padding: 30px 0 66px 138px;
 	}
 }
 
@@ -76,7 +75,7 @@ defineProps({
 
 	@media (min-width: 1440px) {
 		margin-top: 21px;
-		margin-right: 95px;
+		margin-right: 149px;
 	}
 }
 
@@ -121,7 +120,11 @@ defineProps({
 	}
 
 	@media (min-width: 1440px) {
+		flex-shrink: 0;
+		box-sizing: border-box;
 		width: 546px;
+		margin-right: 16px;
+		padding-bottom: 34px;
 	}
 }
 
@@ -137,6 +140,13 @@ defineProps({
 		margin-top: 14px;
 		margin-bottom: 21px;
 		font-size: 24px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-top: 11px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 }
 

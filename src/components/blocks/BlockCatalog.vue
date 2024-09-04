@@ -80,7 +80,7 @@ const games = Array.from({ length: 3 }, () => ({
 
 	@media (min-width: 1440px) {
 		grid-template-rows: 50px 50px;
-		padding: 81px 138px 50px;
+		padding: 81px 138px 39px;
 		padding-right: 137px;
 	}
 }
@@ -183,10 +183,11 @@ const games = Array.from({ length: 3 }, () => ({
 
 	@media (min-width: 1440px) {
 		width: 365px;
+		margin-right: 35px;
 		padding: 24px 25px 29px;
 
 		&:nth-child(2) {
-			margin-right: 30px;
+			margin-right: 35px;
 		}
 
 		&:nth-child(3) {
@@ -214,6 +215,12 @@ const games = Array.from({ length: 3 }, () => ({
 
 	@media (min-width: 768px) {
 		font-size: 18px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-top: 21px;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
 	}
 }
 
@@ -302,6 +309,14 @@ const games = Array.from({ length: 3 }, () => ({
 		text-transform: uppercase;
 		background-color: #90c1bf;
 		border-radius: 6px;
+	}
+
+	@media (min-width: 1440px) {
+		top: 25px;
+		right: 28px;
+		width: 134px;
+		padding: 3px 15px;
+		font-size: 12px;
 	}
 }
 

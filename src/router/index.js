@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import IndexPage from '@/router/IndexPage.vue';
+import NotFoundPage from '@/router/NotFoundPage.vue';
 
 const routes = [
 	{
@@ -15,7 +16,8 @@ if (import.meta.env.DEV) {
 
 routes.push({
 	path: '/:catchAll(.*)',
-	redirect: '/',
+	name: 'notfound',
+	component: NotFoundPage,
 });
 
 const router = createRouter({

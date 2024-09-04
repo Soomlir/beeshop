@@ -102,6 +102,7 @@ defineEmits(['closeMenu']);
 
 	@media (min-width: 1440px) {
 		display: block;
+		box-shadow: 0 5px 13px 0 #ebe7e0;
 	}
 }
 
@@ -237,8 +238,8 @@ defineEmits(['closeMenu']);
 
 	@media (min-width: 1440px) {
 		display: flex;
-		grid-template-columns: 700px 1fr;
 		margin: 0;
+		margin-left: auto;
 	}
 }
 
