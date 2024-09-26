@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import IndexPage from '@/router/IndexPage.vue';
+import CooperationPage from '@/router/CooperationPage.vue';
 import NotFoundPage from '@/router/NotFoundPage.vue';
 
 const routes = [
@@ -7,6 +8,11 @@ const routes = [
 		path: '/',
 		name: 'index',
 		component: IndexPage,
+	},
+	{
+		path: '/cooperation',
+		name: 'cooperation',
+		component: CooperationPage,
 	},
 ];
 
