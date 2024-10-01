@@ -102,6 +102,9 @@ defineEmits(['closeMenu']);
 
 	@media (min-width: 1440px) {
 		display: block;
+		max-width: 1440px;
+		margin-right: auto;
+		margin-left: auto;
 		box-shadow: 0 5px 13px 0 #ebe7e0;
 	}
 }

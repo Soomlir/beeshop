@@ -45,8 +45,8 @@
 				8-(000)-000-00-00 МСК (9-21)</a
 			>
 		</div>
-		<BlockMenu :openMenu @click="closeMenu" :class="{ 'menu--active': isOpen }"/>
 	</div>
+	<BlockMenu :openMenu @click="closeMenu" :class="{ 'menu--active': isOpen }"/>
 	</header>
 </template>
 
@@ -86,6 +86,7 @@ const closeMenu = () => isOpen.value = false;
 	display: flex;
 	justify-content: space-between;
 	box-sizing: border-box;
+	min-width: 375px;
 	padding: 24px 20px 36px;
 	background: linear-gradient(92.55deg, #f2b236 32.31%, #ff9c1a 64.34%);
 	box-shadow: 0 0 7px #ffdba6;
@@ -277,7 +278,7 @@ const closeMenu = () => isOpen.value = false;
 	margin: 0;
 	font-size: 16px;
 	color: #fafaf9;
-	transform: translate(21px, 21px);
+	transform: translate(100px, 16px);
 
 	@media (min-width: 768px) {
 		display: none;

@@ -53,11 +53,11 @@ const games = Array.from({ length: 3 }, () => ({
 		desktopSizes: [1440],
 	},
 	params: {
-		time: '60-90 мин',
-		players: '2-6',
-		prepare: '0 мин',
-		places: 'любые',
-		complexity: 'простая',
+		time: ' 60-90 мин',
+		players: ' 2-6',
+		prepare: ' 0 мин',
+		places: ' любые',
+		complexity: ' простая',
 		age: '6+',
 	},
 	price: 3600,
@@ -356,6 +356,10 @@ const games = Array.from({ length: 3 }, () => ({
 		padding: 17px 28px 20px;
 		font-weight: 500;
 		font-size: 16px;
+	}
+
+	@media (min-width: 1440px) {
+		width: 308px;
 	}
 }
 </style>

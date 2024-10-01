@@ -1,38 +1,42 @@
 <template>
 	<footer class="footer">
-		<a class="footer__link" href="#!">
-			<img class="footer__logo" src="/images/icons/footer-logo.svg" alt="" />
-		</a>
-		<a class="footer__tel" href="tel:+80000000000"
-			>8(000) 000 00 00 МСК (9-21)</a
-		>
-		<a class="footer__email" href="mailto:pchelkashop.ru@mail.ru"
-			>pchelkashop.ru@mail.ru</a
-		>
+		<div class="footer__wrap">
+			<a class="footer__link" href="#!">
+				<img class="footer__logo" src="/images/icons/footer-logo.svg" alt="" />
+			</a>
+			<a class="footer__tel" href="tel:+80000000000"
+				>8(000) 000 00 00 МСК (9-21)</a
+			>
+			<a class="footer__email" href="mailto:pchelkashop.ru@mail.ru"
+				>pchelkashop.ru@mail.ru</a
+			>
 
-		<div class="footer-list__wrapper">
-			<ul class="footer__list footer__list--1">
-				<li class="footer__item"><a href="#!">Акции и новости</a></li>
-				<li class="footer__item"><a href="#!">Игры для праздника</a></li>
-				<li class="footer__item"><a href="#!">Развивающие игры</a></li>
-				<li class="footer__item"><a href="#!">Игры в дорогу</a></li>
-			</ul>
+			<div class="footer-list__wrapper">
+				<ul class="footer__list footer__list--1">
+					<li class="footer__item"><a href="#!">Акции и новости</a></li>
+					<li class="footer__item"><a href="#!">Игры для праздника</a></li>
+					<li class="footer__item"><a href="#!">Развивающие игры</a></li>
+					<li class="footer__item"><a href="#!">Игры в дорогу</a></li>
+				</ul>
 
-			<ul class="footer__list footer__list--2">
-				<li class="footer__item"><a href="#!">Отзывы</a></li>
-				<li class="footer__item"><a href="#!">Доставка и оплата</a></li>
-				<li class="footer__item"><a href="#!">Возврат</a></li>
-				<li class="footer__item"><a href="#!">О компании</a></li>
-				<li class="footer__item"><a href="#!">Контакты</a></li>
-				<li class="footer__item"><a href="#!">Документы</a></li>
-			</ul>
+				<ul class="footer__list footer__list--2">
+					<li class="footer__item"><a href="#!">Отзывы</a></li>
+					<li class="footer__item"><a href="#!">Доставка и оплата</a></li>
+					<li class="footer__item"><a href="#!">Возврат</a></li>
+					<li class="footer__item"><a href="#!">О компании</a></li>
+					<li class="footer__item"><a href="#!">Контакты</a></li>
+					<li class="footer__item"><a href="#!">Документы</a></li>
+				</ul>
 
-			<ul class="footer__list footer__list--3">
-				<li class="footer__item footer__item--accent"><a href="#!">Личный кабинет</a></li>
-				<li class="footer__item"><a href="#!">Партнерам</a></li>
-				<li class="footer__item"><a href="#!">Групповой заказ</a></li>
-				<li class="footer__item"><a href="#!">Постоянный покупатель</a></li>
-			</ul>
+				<ul class="footer__list footer__list--3">
+					<li class="footer__item footer__item--accent">
+						<a href="#!">Личный кабинет</a>
+					</li>
+					<li class="footer__item"><a href="#!">Партнерам</a></li>
+					<li class="footer__item"><a href="#!">Групповой заказ</a></li>
+					<li class="footer__item"><a href="#!">Постоянный покупатель</a></li>
+				</ul>
+			</div>
 		</div>
 
 		<div class="footer__political">
@@ -44,6 +48,10 @@
 
 <style lang="scss" scoped>
 .footer {
+
+}
+
+.footer__wrap {
 	padding-top: 47px;
 	text-align: center;
 	background: linear-gradient(to right, #f2b236 0%, #ff9c1a 100%);
@@ -56,8 +64,11 @@
 
 	@media (min-width: 1440px) {
 		grid-template-columns: 265px 265px 1fr;
-		grid-template-rows: 76px 40px 40px 100px;
-		padding: 58px 138px 10px;
+		grid-template-rows: 76px 36px 40px 100px;
+		max-width: 1440px;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 58px 138px 68px;
 	}
 }
 
@@ -109,7 +120,10 @@
 	}
 
 	@media (min-width: 1440px) {
+		align-self: end;
 		grid-row: 2 / 2;
+		padding: 0;
+		font-size: 18px;
 	}
 }
 
@@ -124,8 +138,11 @@
 	}
 
 	@media (min-width: 1440px) {
+		align-self: center;
 		grid-column: 1 / 2;
 		grid-row: 3 / 4;
+		padding: 0;
+		font-size: 18px;
 	}
 }
 
@@ -158,6 +175,9 @@
 
 	@media (min-width: 1440px) {
 		grid-column: 3 / -1;
+		grid-template-columns: 212px 199px 230px;
+		padding: 0;
+		padding-left: 35px;
 	}
 }
 
@@ -184,6 +204,10 @@
 			text-align: left;
 		}
 	}
+
+	@media (min-width: 1440px) {
+		padding: 0;
+	}
 }
 
 .footer__item {
@@ -209,6 +233,7 @@
 	@media (min-width: 1440px) {
 		grid-column: 1 / -1;
 		grid-row: 5 / 6;
+		padding: 59px 139px;
 	}
 }
 
