@@ -48,13 +48,12 @@
 
 <style lang="scss" scoped>
 .footer {
-
+	background: linear-gradient(to right, #f2b236 0%, #ff9c1a 100%);
 }
 
 .footer__wrap {
 	padding-top: 47px;
 	text-align: center;
-	background: linear-gradient(to right, #f2b236 0%, #ff9c1a 100%);
 
 	@media (min-width: 768px) {
 		display: grid;
