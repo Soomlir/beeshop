@@ -278,7 +278,7 @@ const closeMenu = () => isOpen.value = false;
 	margin: 0;
 	font-size: 16px;
 	color: #fafaf9;
-	transform: translate(100px, 16px);
+	transform: translate(19px, 16px);
 
 	@media (min-width: 768px) {
 		display: none;
