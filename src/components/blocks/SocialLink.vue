@@ -19,5 +19,10 @@
 		width: 53px;
 		height: 53px;
 	}
+
+	@media (min-width: 1440px) {
+		width: 42px;
+		height: 42px;
+	}
 }
 </style>

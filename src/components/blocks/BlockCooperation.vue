@@ -3,7 +3,14 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 </script>
 
 <template>
+	<div class="breadcrumbs">
+			<ul>
+				<li><a href="#!">Главная</a></li>
+				<li><a href="#!">Сотрудничество</a></li>
+			</ul>
+		</div>
 	<section class="cooperation">
+
 		<h1 class="cooperation__title">Сотрудничество</h1>
 		<p class="cooperation__info">
 			Информация о сотрудничестве для оптовых покупателей<br />
@@ -28,7 +35,7 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 					</li>
 					<li class="features__item">
 						Получить самые выгодные скидки, которые действуют у нас. Например,
-						15% для группового заказа от школы или организации
+						15% для группового заказа от школы<br class="desktop"> или организации
 					</li>
 					<li class="features__item">
 						Оформить наиболее удобный способ доставки - курьером, транспортной
@@ -64,21 +71,21 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 					Это возможно в рамках сотрудничества по одобренной заявке. <br />Этапы
 					сотрудничества:
 				</p>
-				<ol class="algorithm__list">
+				<ul class="algorithm__list">
 					<li class="algorithm__item">
-						Вы выбираете продукт/ы, о котором/ых хотите написать/снять
+						1. Вы выбираете продукты, о котором/ых хотите написать/снять
 						видео-обзор или статью.
 					</li>
 					<li class="algorithm__item">
-						Направляете заявку с указанием желаемого продукта, ссылкой на вашу
-						площадку и показателям статистики просмотров/вовлечённости,
+						2. Направляете заявку с указанием желаемого продукта, ссылкой на
+						вашу площадку и показателям статистики просмотров/вовлечённости,
 						половозрастному распределению аудиторию.
 					</li>
 					<li class="algorithm__item">
-						Для крупных блогеров будут рассмотрены индивидуальные условия
+						3. Для крупных блогеров будут рассмотрены индивидуальные условия
 						сотрудничества.
 					</li>
-				</ol>
+				</ul>
 				<div class="cooperation__contacts">
 					<p class="cooperation__order">
 						Заявки отправляйте на почту <span>pchelkashop.ru@mail.ru</span> с
@@ -202,12 +209,63 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 
 <style scoped lang="scss">
 .cooperation {
-	margin-bottom: 28px;
+	margin-bottom: 33px;
 	padding: 55px 20px;
 
 	@media (min-width: 768px) {
 		padding: 80px 54px;
-		padding-bottom: 16px;
+		padding-bottom: 13px;
+	}
+
+	@media (min-width: 1440px) {
+		max-width: 1440px;
+		margin-right: auto;
+		margin-bottom: 0;
+		margin-left: auto;
+		padding: 52px 138px;
+		padding-bottom: 106px;
+	}
+}
+
+.breadcrumbs {
+	display: none;
+
+	@media (min-width: 1440px) {
+		display: flex;
+		padding: 36px 138px;
+		padding-bottom: 59px;
+		border-bottom: 1px solid #a5aaaf;
+
+		& ul {
+			display: flex;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		& li {
+			position: relative;
+			padding-right: 28px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 7px;
+				width: 9px;
+				height: 15px;
+				background-image: url('/public/images/icons/arrow-breadcrumb.svg');
+			}
+
+			&:last-child::after {
+				display: none;
+			}
+		}
+
+		& a {
+			color: #a5aaaf;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -221,6 +279,11 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	@media (min-width: 768px) {
 		font-size: 32px;
 	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 32px;
+		font-size: 44px;
+	}
 }
 
 .cooperation__info {
@@ -231,8 +294,18 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	color: #5b636b;
 
 	@media (min-width: 768px) {
-		margin-bottom: 64px;
+		margin-bottom: 65px;
+		margin-left: 3px;
 		font-size: 20px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-left: 0;
+		font-size: 18px;
+
+		& br {
+			display: none;
+		}
 	}
 }
 
@@ -241,8 +314,28 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	margin-bottom: 25px;
 
 	@media (min-width: 768px) {
-		margin-bottom: 42px;
+		position: relative;
+		margin-bottom: 41px;
 		padding-left: 43px;
+
+		&::before {
+			content: '1';
+			position: absolute;
+			top: 3px;
+			left: 8px;
+			font-size: 34px;
+			color: #f2b236;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		padding-left: 49px;
+
+		&::before {
+			top: 1px;
+			left: 3px;
+			font-size: 47px;
+		}
 	}
 }
 
@@ -252,7 +345,11 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	font-size: 16px;
 
 	@media (min-width: 768px) {
-		margin-bottom: 22px;
+		margin-bottom: 23px;
+	}
+
+	@media (min-width: 1440px) {
+		font-size: 18px;
 	}
 }
 
@@ -266,31 +363,83 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	font-weight: 500;
 	font-size: 20px;
 	color: #222528;
+
+	@media (min-width: 1440px) {
+		font-size: 24px;
+	}
 }
 
 .features__list {
 	margin: 0;
-	margin-bottom: 14px;
+	margin-bottom: 16px;
 	padding: 0;
-	padding-left: 57px;
-	list-style: circle;
+	padding-left: 27px;
+	list-style: none;
 
 	@media (min-width: 768px) {
 		margin-bottom: 32px;
 	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 24px;
+		padding-left: 0;
+	}
 }
 
 .features__item {
+	position: relative;
+	padding-left: 30px;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 26px;
 	color: #222528;
+
+	& .desktop {
+		display: none;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 7px;
+		left: 6px;
+		width: 10px;
+		height: 10px;
+		background-color: #f2b236;
+		border-radius: 50%;
+	}
+
+	@media (min-width: 768px) {
+		&::before {
+			top: 6px;
+			left: 11px;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		padding-left: 36px;
+
+		& .desktop {
+			display: block;
+		}
+
+		&::before {
+			top: 5px;
+			left: 13px;
+			width: 13px;
+			height: 13px;
+		}
+	}
 }
 
 .cooperation__contacts {
 	margin-bottom: 64px;
 
 	@media (min-width: 768px) {
+		margin-bottom: 65px;
+	}
+
+	@media (min-width: 1440px) {
 		margin-bottom: 66px;
 	}
 }
@@ -300,21 +449,44 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	margin-bottom: 16px;
 	font-size: 16px;
 	color: #90c1bf;
+
+	@media (min-width: 1440px) {
+		font-size: 18px;
+	}
 }
 
 .cooperation__social {
 	display: flex;
 	margin: 0;
+	margin-left: 2px;
 	padding: 0;
 	list-style: none;
+
+	& li {
+		margin-right: 16px;
+	}
 }
 
 .cooperation__heading-inner {
 	margin: 0;
 	margin-bottom: 8px;
 
+	& .mobile {
+		display: none;
+	}
+
 	@media (min-width: 768px) {
+		position: relative;
 		padding-left: 43px;
+
+		&::before {
+			content: '2';
+			position: absolute;
+			top: 0;
+			left: 6px;
+			font-size: 34px;
+			color: #f2b236;
+		}
 
 		& .mobile {
 			display: none;
@@ -322,6 +494,16 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 
 		& .tablet {
 			display: block;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 4px;
+		padding-left: 50px;
+
+		&::before {
+			left: 1px;
+			font-size: 47px;
 		}
 	}
 }
@@ -333,8 +515,14 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	color: #5b636b;
 
 	@media (min-width: 768px) {
-		margin-bottom: 40px;
+		margin-bottom: 41px;
 		margin-left: 43px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 39px;
+		margin-left: 50px;
+		font-size: 18px;
 	}
 }
 
@@ -347,19 +535,28 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	@media (min-width: 768px) {
 		margin-bottom: 24px;
 	}
+
+	@media (min-width: 1440px) {
+		font-size: 18px;
+	}
 }
 
 .algorithm__list {
 	margin: 0;
-	margin-bottom: 43px;
+	margin-bottom: 17px;
 	padding: 0;
 	padding-left: 58px;
+	list-style: none;
 	font-size: 16px;
 	line-height: 26px;
 	color: #222528;
 
 	@media (min-width: 768px) {
 		margin-bottom: 32px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 39px;
 	}
 }
 
@@ -372,6 +569,10 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	& span {
 		color: #db4e66;
 	}
+
+	@media (min-width: 1440px) {
+		font-size: 18px;
+	}
 }
 
 .cooperation__partner {
@@ -379,7 +580,29 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	margin-bottom: 9px;
 
 	@media (min-width: 768px) {
+		position: relative;
 		padding-left: 43px;
+
+		&::before {
+			content: '3';
+			position: absolute;
+			top: 2px;
+			left: 4px;
+			font-size: 34px;
+			color: #f2b236;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 4px;
+		margin-left: 6px;
+		padding-top: 8px;
+
+		&::before {
+			top: 0;
+			left: -8px;
+			font-size: 47px;
+		}
 	}
 }
 
@@ -390,8 +613,13 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	color: #5b636b;
 
 	@media (min-width: 768px) {
-		margin-bottom: 37px;
+		margin-bottom: 40px;
 		padding-left: 43px;
+	}
+
+	@media (min-width: 1440px) {
+		padding-left: 48px;
+		font-size: 18px;
 	}
 }
 
@@ -400,29 +628,87 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	margin-bottom: 22px;
 	font-size: 16px;
 	color: #222528;
+
+	@media (min-width: 1440px) {
+		font-size: 18px;
+	}
 }
 
 .cooperation__list-features {
-	margin-bottom: 30px;
-	padding-left: 59px;
+	margin-bottom: 34px;
+	padding-left: 29px;
+	list-style: none;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 26px;
 	color: #222528;
+
+	@media (min-width: 768px) {
+		padding-left: 28px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 41px;
+		padding-left: 0;
+	}
+}
+
+.cooperation__item-features {
+	position: relative;
+	padding-left: 30px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 10px;
+		left: 3px;
+		width: 10px;
+		height: 10px;
+		background-color: #f2b236;
+		border-radius: 50%;
+	}
+
+	@media (min-width: 768px) {
+		&::before {
+			top: 9px;
+			left: 10px;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		padding-left: 36px;
+
+		&::before {
+			top: 8px;
+			left: 13px;
+			width: 13px;
+			height: 13px;
+		}
+	}
 }
 
 .cooperation__accent {
 	margin: 0;
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 16px;
 	color: #db4e66;
 
 	& span {
+		font-weight: 500;
 		font-size: 20px;
+	}
+
+	@media (min-width: 1440px) {
+		font-size: 18px;
+
+		& span {
+			font-size: 24px;
+		}
 	}
 }
 
 .feedback-form {
+	margin-bottom: 120px;
 	padding: 52px 30px;
 	font-weight: 500;
 	color: #fafaf9;
@@ -431,7 +717,13 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	@media (min-width: 768px) {
 		margin-bottom: 120px;
 		padding-top: 67px;
-		padding-bottom: 0;
+		padding-bottom: 79px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 242px;
+		padding-top: 62px;
+		padding-bottom: 74px;
 	}
 }
 
@@ -440,19 +732,30 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 	margin-bottom: 16px;
 	font-size: 20px;
 	text-align: center;
+
+	@media (min-width: 1440px) {
+		font-size: 24px;
+	}
 }
 
 .feedback-form__text {
 	margin: 0;
-	margin-bottom: 33px;
+	margin-bottom: 35px;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 26px;
 	text-align: center;
+
+	@media (min-width: 768px) {
+		margin-bottom: 34px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 18px;
+	}
 }
 
 .feedback__form {
-	margin-bottom: 120px;
 	padding-bottom: 64px;
 	font-weight: 400;
 
@@ -494,6 +797,18 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 		padding-bottom: 0;
 		gap: 30px;
 	}
+
+	@media (min-width: 1440px) {
+		grid-template-columns: 329px 329px;
+		width: 729px;
+		margin-right: auto;
+		margin-left: auto;
+		column-gap: 71px;
+
+		& input[type='tel'] {
+			width: 209px;
+		}
+	}
 }
 
 .feedback__form-select {
@@ -528,6 +843,11 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 		grid-row: 5/6;
 		margin-top: 30px;
 		margin-left: 190px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-top: 38px;
+		margin-left: 211px;
 	}
 }
 </style>
