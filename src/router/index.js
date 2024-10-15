@@ -4,6 +4,7 @@ import CooperationPage from '@/router/CooperationPage.vue';
 import OrderPage from '@/router/OrderPage.vue';
 import CartPage from '@/router/CartPage.vue';
 import NotFoundPage from '@/router/NotFoundPage.vue';
+import DocsPage from '@/router/DocsPage.vue';
 
 const routes = [
 	{
@@ -25,6 +26,11 @@ const routes = [
 		path: '/cart',
 		name: 'cart',
 		component: CartPage,
+	},
+	{
+		path: '/docs',
+		name: 'docs',
+		component: DocsPage,
 	},
 ];
 

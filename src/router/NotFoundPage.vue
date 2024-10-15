@@ -24,6 +24,9 @@
 <style lang="scss" scoped>
 .notfound {
 	@media (min-width: 1440px) {
+		max-width: 1440px;
+		margin-right: auto;
+		margin-left: auto;
 		padding-bottom: 120px;
 	}
 }

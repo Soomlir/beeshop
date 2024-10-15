@@ -4,13 +4,12 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 
 <template>
 	<div class="breadcrumbs">
-			<ul>
-				<li><a href="#!">Главная</a></li>
-				<li><a href="#!">Сотрудничество</a></li>
-			</ul>
-		</div>
+		<ul>
+			<li><a href="#!">Главная</a></li>
+			<li><a href="#!">Сотрудничество</a></li>
+		</ul>
+	</div>
 	<section class="cooperation">
-
 		<h1 class="cooperation__title">Сотрудничество</h1>
 		<p class="cooperation__info">
 			Информация о сотрудничестве для оптовых покупателей<br />
@@ -35,7 +34,8 @@ import SocialLink from '@/components/blocks/SocialLink.vue';
 					</li>
 					<li class="features__item">
 						Получить самые выгодные скидки, которые действуют у нас. Например,
-						15% для группового заказа от школы<br class="desktop"> или организации
+						15% для группового заказа от школы<br class="desktop" />
+						или организации
 					</li>
 					<li class="features__item">
 						Оформить наиболее удобный способ доставки - курьером, транспортной
